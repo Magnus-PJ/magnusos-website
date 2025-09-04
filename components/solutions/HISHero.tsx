@@ -14,13 +14,13 @@ export default function HISHero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-healthcare-900">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-200 via-primary-100 to-healthcare-200">
+        <div className="absolute inset-0 bg-white/10"></div>
         <div className="absolute inset-0 bg-[url('/images/hospital-bg.jpg')] bg-cover bg-center opacity-10"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-padding max-w-7xl mx-auto text-center text-white">
+      <div className="relative z-10 container-padding max-w-7xl mx-auto text-center text-gray-900">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,12 +90,12 @@ export default function HISHero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <button className="group bg-white text-primary-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all duration-200 flex items-center space-x-3 shadow-lg hover:shadow-xl">
+            <button className="group bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-600 transition-all duration-200 flex items-center space-x-3 shadow-lg hover:shadow-xl">
               <span>Request Demo</span>
               <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
-            <button className="group border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-200 flex items-center space-x-3">
+            <button className="group border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-500 hover:text-white transition-all duration-200 flex items-center space-x-3">
               <PlayIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               <span>Watch Demo</span>
             </button>

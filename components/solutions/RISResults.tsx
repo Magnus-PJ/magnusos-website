@@ -85,7 +85,7 @@ export default function RISResults() {
               transition={{ duration: 0.6 }}
             >
               Proven Results in 
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-600 to-primary-600">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-400 to-primary-400">
                 Radiology Departments
               </span>
             </motion.h2>
@@ -113,7 +113,7 @@ export default function RISResults() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className={`w-20 h-20 bg-gradient-to-br from-${metric.color}-100 to-${metric.color}-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-${metric.color}-300/50 group-hover:scale-105 transition-transform duration-300`}>
-                <metric.icon className={`w-10 h-10 text-${metric.color}-600`} />
+                <metric.icon className={`w-10 h-10 text-${metric.color}-500`} />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-3 group-hover:scale-110 transition-transform duration-300">{metric.title}</div>
               <div className="font-semibold text-gray-700 mb-3">{metric.subtitle}</div>
@@ -149,7 +149,7 @@ export default function RISResults() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                    <div className="text-sm text-primary-600">{testimonial.role}</div>
+                    <div className="text-sm text-primary-500">{testimonial.role}</div>
                     <div className="text-sm text-gray-600">{testimonial.hospital}</div>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function RISResults() {
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-gray-200/50 hover:border-primary-300/50 transition-all duration-300">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <ChartBarIcon className="w-8 h-8 text-red-600" />
+                  <ChartBarIcon className="w-8 h-8 text-red-500" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Before MagnusOS RIS</h4>
               </div>
@@ -210,7 +210,7 @@ export default function RISResults() {
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-gray-200/50 hover:border-primary-300/50 transition-all duration-300">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <ArrowTrendingUpIcon className="w-8 h-8 text-green-600" />
+                  <ArrowTrendingUpIcon className="w-8 h-8 text-green-500" />
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">After MagnusOS RIS</h4>
               </div>
