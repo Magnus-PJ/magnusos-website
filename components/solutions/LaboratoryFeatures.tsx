@@ -10,7 +10,7 @@ import {
   ShieldCheckIcon,
   ClockIcon,
   MagnifyingGlassIcon,
-  TestTubeIcon
+  BeakerIcon as TestTubeIcon
 } from '@heroicons/react/24/outline'
 
 const features = [
