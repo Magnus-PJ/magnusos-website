@@ -1972,9 +1972,14 @@ select {
   }
 }
 .heading-3 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  line-height: 1.5;
   letter-spacing: -0.025em;
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
@@ -3923,14 +3928,14 @@ select {
 .leading-6 {
   line-height: 1.5rem;
 }
+.leading-normal {
+  line-height: 1.5;
+}
 .leading-relaxed {
   line-height: 1.625;
 }
 .leading-tight {
   line-height: 1.25;
-}
-.leading-normal {
-  line-height: 1.5;
 }
 .tracking-tight {
   letter-spacing: -0.025em;

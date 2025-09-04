@@ -170,7 +170,7 @@ export default function PersonaValueProps() {
         {/* Section Header - Mobile Optimized */}
         <div className="text-center mb-16 sm:mb-20">
           <motion.h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-normal px-4 py-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -395,7 +395,7 @@ export default function PersonaValueProps() {
                         <selectedPersona.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 leading-normal px-2 py-1">
                           {selectedPersona.content.title}
                         </h3>
                         <p className="text-sm sm:text-base text-gray-600 mt-2 leading-relaxed max-w-2xl">

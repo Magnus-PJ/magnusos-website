@@ -69,7 +69,7 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-teal-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">M</span>
                 </div>
-                <span className="text-2xl font-bold">MagnusOS.ai</span>
+                <span className="text-2xl font-bold leading-normal px-2 py-1">MagnusOS.ai</span>
               </div>
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 The world's most comprehensive, modular, and AI-enabled health operating system that transforms patient care and empowers healthcare organizations.
@@ -260,3 +260,4 @@ export default function Footer() {
   )
 }
 
+  
