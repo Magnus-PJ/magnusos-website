@@ -85,7 +85,7 @@ export default function RISResults() {
               transition={{ duration: 0.6 }}
             >
               Proven Results in 
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-400 to-primary-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-300 to-primary-300">
                 Radiology Departments
               </span>
             </motion.h2>

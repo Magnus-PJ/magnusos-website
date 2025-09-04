@@ -16,9 +16,14 @@ export default function RISHero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-healthcare-200 via-primary-100 to-primary-200">
-        <div className="absolute inset-0 bg-white/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-healthcare-50 via-white to-primary-50">
+        <div className="absolute inset-0 bg-gradient-to-r from-healthcare-100/20 to-primary-100/20"></div>
         <div className="absolute inset-0 bg-[url('/images/radiology-bg.jpg')] bg-cover bg-center opacity-10"></div>
+        
+        {/* Subtle Decorative Elements */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-healthcare-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-primary-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-healthcare-100/20 to-primary-100/20 rounded-full blur-3xl"></div>
       </div>
 
       {/* Content */}

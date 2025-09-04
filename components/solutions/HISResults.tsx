@@ -85,7 +85,7 @@ export default function HISResults() {
               transition={{ duration: 0.6 }}
             >
               Proven Results Across 
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-healthcare-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-healthcare-300">
                 Healthcare Organizations
               </span>
             </motion.h2>
