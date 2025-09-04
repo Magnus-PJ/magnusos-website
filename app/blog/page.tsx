@@ -24,7 +24,7 @@ export default function BlogPage() {
           </p>
         </div>
 
-        {/* Featured Article Placeholder */}
+        {/* Featured Article */}
         <div className="bg-gradient-to-br from-primary-50 to-healthcare-50 rounded-2xl p-8 border border-primary-100 mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -32,14 +32,19 @@ export default function BlogPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">The Future of AI in Healthcare: Trends and Predictions for 2025</h2>
               <p className="text-gray-600 mb-6">
                 Explore how artificial intelligence is transforming healthcare delivery, from diagnostic assistance to personalized treatment plans, 
-                and what healthcare organizations need to know to stay ahead.
+                and what healthcare organizations need to know to stay ahead of the curve in this rapidly evolving landscape.
               </p>
-              <div className="flex items-center space-x-4 text-sm text-gray-500">
+              <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
                 <span>By Dr. Paul Joy</span>
                 <span>•</span>
                 <span>January 15, 2025</span>
                 <span>•</span>
                 <span>5 min read</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-2 py-1 bg-white/50 text-gray-600 rounded text-xs">AI Healthcare</span>
+                <span className="px-2 py-1 bg-white/50 text-gray-600 rounded text-xs">Digital Transformation</span>
+                <span className="px-2 py-1 bg-white/50 text-gray-600 rounded text-xs">Future Trends</span>
               </div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
@@ -47,6 +52,48 @@ export default function BlogPage() {
                 <span className="text-4xl">📊</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Recent Articles */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <div className="w-full h-40 bg-gradient-to-br from-primary-100 to-healthcare-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-3xl">🏥</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Digital Hospital Transformation: A Complete Guide</h3>
+              <p className="text-gray-600 text-sm mb-4">Learn how to successfully transform your hospital into a digital-first healthcare organization with proven strategies and best practices.</p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>By Dr. Ambily</span>
+                <span>Jan 12, 2025</span>
+              </div>
+            </article>
+
+            <article className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <div className="w-full h-40 bg-gradient-to-br from-healthcare-100 to-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">HIPAA Compliance in the Cloud Era</h3>
+              <p className="text-gray-600 text-sm mb-4">Understanding the latest HIPAA requirements for cloud-based healthcare systems and how to ensure full compliance.</p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>By Legal Team</span>
+                <span>Jan 10, 2025</span>
+              </div>
+            </article>
+
+            <article className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+              <div className="w-full h-40 bg-gradient-to-br from-primary-100 to-healthcare-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-3xl">📱</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Patient Engagement Through Mobile Health</h3>
+              <p className="text-gray-600 text-sm mb-4">Explore how mobile health applications are revolutionizing patient engagement and improving healthcare outcomes.</p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>By UX Team</span>
+                <span>Jan 8, 2025</span>
+              </div>
+            </article>
           </div>
         </div>
 

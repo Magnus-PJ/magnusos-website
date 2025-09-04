@@ -24,16 +24,22 @@ export default function RevenueModelPage() {
           </p>
         </div>
 
-        {/* Placeholder Content */}
+        {/* Pricing Models */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-primary-50 to-healthcare-50 rounded-2xl p-8 border border-primary-100">
             <div className="w-16 h-16 bg-primary-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <span className="text-white text-2xl">💼</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Subscription Plans</h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600 text-center mb-6">
               Flexible monthly and annual subscription options with different tiers based on your organization size and requirements.
             </p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>• Starter: $99/month (up to 10 users)</li>
+              <li>• Professional: $299/month (up to 50 users)</li>
+              <li>• Enterprise: $599/month (unlimited users)</li>
+              <li>• Annual discounts up to 20%</li>
+            </ul>
           </div>
 
           <div className="bg-gradient-to-br from-healthcare-50 to-primary-50 rounded-2xl p-8 border border-healthcare-100">
@@ -41,9 +47,15 @@ export default function RevenueModelPage() {
               <span className="text-white text-2xl">👥</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Per-User Pricing</h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600 text-center mb-6">
               Pay only for the users you need with scalable pricing that grows with your team and patient volume.
             </p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>• Basic User: $15/month per user</li>
+              <li>• Clinical User: $25/month per user</li>
+              <li>• Admin User: $35/month per user</li>
+              <li>• Volume discounts available</li>
+            </ul>
           </div>
 
           <div className="bg-gradient-to-br from-primary-50 to-healthcare-50 rounded-2xl p-8 border border-primary-100">
@@ -51,9 +63,107 @@ export default function RevenueModelPage() {
               <span className="text-white text-2xl">🏢</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Enterprise Solutions</h3>
-            <p className="text-gray-600 text-center">
+            <p className="text-gray-600 text-center mb-6">
               Custom enterprise packages with dedicated support, on-premise deployment, and tailored features.
             </p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>• Custom pricing based on needs</li>
+              <li>• On-premise deployment options</li>
+              <li>• Dedicated support team</li>
+              <li>• Custom integrations included</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Value Proposition */}
+        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose MagnusOS.ai?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-primary-600 text-xl">💰</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Cost Effective</h3>
+              <p className="text-gray-600 text-sm">Reduce operational costs by up to 40% with integrated workflows</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-healthcare-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-healthcare-600 text-xl">⚡</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Quick ROI</h3>
+              <p className="text-gray-600 text-sm">See return on investment within 6-12 months of implementation</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-primary-600 text-xl">📈</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Scalable</h3>
+              <p className="text-gray-600 text-sm">Grow from small clinic to large hospital network seamlessly</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-healthcare-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-healthcare-600 text-xl">🛡️</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Secure</h3>
+              <p className="text-gray-600 text-sm">HIPAA, GDPR, and NDHM compliant with enterprise-grade security</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Implementation Costs */}
+        <div className="bg-gradient-to-br from-primary-50 to-healthcare-50 rounded-2xl p-8 border border-primary-100 mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Implementation & Setup</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Included in All Plans</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  Initial setup and configuration
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  Data migration assistance
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  Staff training sessions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  24/7 technical support
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  Regular system updates
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Optional Add-ons</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-healthcare-500 rounded-full mr-3"></span>
+                  Custom integrations: $2,500+
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-healthcare-500 rounded-full mr-3"></span>
+                  Advanced training: $500/day
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-healthcare-500 rounded-full mr-3"></span>
+                  Dedicated support: $1,000/month
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-healthcare-500 rounded-full mr-3"></span>
+                  On-premise deployment: $5,000+
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-healthcare-500 rounded-full mr-3"></span>
+                  Custom development: $150/hour
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

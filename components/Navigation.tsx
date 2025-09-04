@@ -24,8 +24,18 @@ const navigation = [
   },
   { name: 'About', href: '/about' },
   { name: 'Resources', href: '/resources' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Careers', href: '/careers' },
+  { 
+    name: 'More', 
+    href: '#',
+    dropdown: [
+      { name: 'Blog', href: '/blog', description: 'Healthcare technology insights and trends', icon: '📝' },
+      { name: 'Careers', href: '/careers', description: 'Join our mission to transform healthcare', icon: '💼' },
+      { name: 'Support', href: '/support', description: 'Get help and technical support', icon: '🆘' },
+      { name: 'Privacy Policy', href: '/privacy', description: 'How we protect your data and privacy', icon: '🔒' },
+      { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions for our services', icon: '📋' },
+      { name: 'Revenue Model', href: '/revenue-model', description: 'Pricing and subscription options', icon: '💰' }
+    ]
+  },
   { name: 'Contact', href: '/contact' }
 ]
 

@@ -15,14 +15,16 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">About MagnusOS.ai</h1>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            About <span className="bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">MagnusOS.ai</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pioneering the future of healthcare with AI-first technology solutions that transform digital hospitals worldwide.
+          </p>
+        </div>
         
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-600 mb-8">
-            MagnusOS.ai is pioneering the future of healthcare with AI-first technology solutions 
-            that unify hospital operations, enhance patient care, and drive digital transformation 
-            across the healthcare ecosystem.
-          </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div>
