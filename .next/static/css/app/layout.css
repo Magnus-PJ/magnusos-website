@@ -3929,6 +3929,9 @@ select {
 .leading-tight {
   line-height: 1.25;
 }
+.leading-normal {
+  line-height: 1.5;
+}
 .tracking-tight {
   letter-spacing: -0.025em;
 }
