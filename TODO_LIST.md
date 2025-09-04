@@ -14,6 +14,12 @@
 - [ ] Ensure proper content alignment with navigation
 - [ ] Standardize page layouts and margins
 
+### **3. Persona Selection Boxes Issues**
+- [ ] **CRITICAL**: Persona selection boxes are asymmetrical and clunky
+- [ ] **CRITICAL**: One box is missing, causing uneven layout
+- [ ] **CRITICAL**: Need better arrangement for visual balance
+- [ ] **CRITICAL**: Make persona selection look less clunky and more appealing
+
 ## 🔧 **COMPLETED TASKS**
 
 ### **✅ Navigation & Structure**

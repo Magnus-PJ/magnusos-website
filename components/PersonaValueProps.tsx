@@ -189,38 +189,77 @@ export default function PersonaValueProps() {
           </motion.p>
         </div>
 
-        {/* Persona Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
-          {personas.map((persona, index) => (
-            <motion.button
-              key={persona.id}
-              onClick={() => setSelectedPersona(persona)}
-              className={`p-6 rounded-xl border-2 transition-all duration-200 hover:scale-105 hover:shadow-medium ${
-                selectedPersona?.id === persona.id 
-                  ? 'border-primary-500 bg-primary-50 shadow-medium' 
-                  : 'border-gray-200 bg-white hover:border-primary-300'
-              }`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-center space-y-3">
-                <div className={`mx-auto w-12 h-12 rounded-lg flex items-center justify-center ${
+        {/* Persona Grid - Balanced Layout */}
+        <div className="mb-16">
+          {/* First Row - 4 personas */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            {personas.slice(0, 4).map((persona, index) => (
+              <motion.button
+                key={persona.id}
+                onClick={() => setSelectedPersona(persona)}
+                className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                   selectedPersona?.id === persona.id 
-                    ? 'bg-primary-100 text-primary-600' 
-                    : 'bg-gray-100 text-gray-600'
-                }`}>
-                  <persona.icon className="w-6 h-6" />
+                    ? 'border-primary-500 bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg' 
+                    : 'border-gray-200 bg-white hover:border-primary-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-white'
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+              >
+                <div className="text-center space-y-4">
+                  <div className={`mx-auto w-14 h-14 rounded-2xl flex items-center justify-center shadow-md transition-all duration-300 ${
+                    selectedPersona?.id === persona.id 
+                      ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-lg' 
+                      : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-600 group-hover:from-primary-100 group-hover:to-primary-200 group-hover:text-primary-600'
+                  }`}>
+                    <persona.icon className="w-7 h-7" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-sm leading-tight">{persona.name}</h3>
+                    <p className="text-xs text-gray-500 mt-2 leading-relaxed">{persona.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{persona.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">{persona.description}</p>
-                </div>
-              </div>
-            </motion.button>
-          ))}
+              </motion.button>
+            ))}
+          </div>
+          
+          {/* Second Row - 3 personas centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
+              {personas.slice(4, 7).map((persona, index) => (
+                <motion.button
+                  key={persona.id}
+                  onClick={() => setSelectedPersona(persona)}
+                  className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                    selectedPersona?.id === persona.id 
+                      ? 'border-primary-500 bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg' 
+                      : 'border-gray-200 bg-white hover:border-primary-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-white'
+                  }`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: (index + 4) * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                >
+                  <div className="text-center space-y-4">
+                    <div className={`mx-auto w-14 h-14 rounded-2xl flex items-center justify-center shadow-md transition-all duration-300 ${
+                      selectedPersona?.id === persona.id 
+                        ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-lg' 
+                        : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-600 group-hover:from-primary-100 group-hover:to-primary-200 group-hover:text-primary-600'
+                    }`}>
+                      <persona.icon className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-sm leading-tight">{persona.name}</h3>
+                      <p className="text-xs text-gray-500 mt-2 leading-relaxed">{persona.description}</p>
+                    </div>
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Selected Persona Content */}
