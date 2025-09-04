@@ -72,7 +72,7 @@ export default function MagnusOSHighlights() {
           {highlights.map((highlight, index) => (
             <motion.div
               key={index}
-              className="card-hover group"
+              className="card-hover group bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-gray-200/50 hover:border-primary-300/70 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -80,12 +80,12 @@ export default function MagnusOSHighlights() {
               whileHover={{ y: -5 }}
             >
               <div className="flex items-start space-x-4">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                  highlight.color === 'primary' ? 'bg-primary-100 text-primary-600' :
-                  highlight.color === 'healthcare' ? 'bg-healthcare-100 text-healthcare-600' :
-                  highlight.color === 'success' ? 'bg-success-100 text-success-600' :
-                  'bg-warning-100 text-warning-600'
-                } group-hover:scale-110 transition-transform duration-200`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center border-2 ${
+                  highlight.color === 'primary' ? 'bg-primary-100 text-primary-600 border-primary-300/50' :
+                  highlight.color === 'healthcare' ? 'bg-healthcare-100 text-healthcare-600 border-healthcare-300/50' :
+                  highlight.color === 'success' ? 'bg-success-100 text-success-600 border-success-300/50' :
+                  'bg-warning-100 text-warning-600 border-warning-300/50'
+                } group-hover:scale-110 transition-transform duration-200 shadow-lg`}>
                   <highlight.icon className="w-6 h-6" />
                 </div>
                 <div className="flex-1">

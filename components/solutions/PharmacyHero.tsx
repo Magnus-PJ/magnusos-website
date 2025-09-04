@@ -71,7 +71,7 @@ export default function PharmacyHero() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="text-center group">
-            <div className="relative w-18 h-18 bg-gradient-to-br from-warning-500 to-warning-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-warning-500 to-warning-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <PillIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Smart Inventory</h3>
@@ -82,7 +82,7 @@ export default function PharmacyHero() {
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative w-18 h-18 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <ChartBarIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Patient CRM</h3>
@@ -93,7 +93,7 @@ export default function PharmacyHero() {
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative w-18 h-18 bg-gradient-to-br from-success-500 to-success-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-success-500 to-success-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <CogIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Workflow Automation</h3>
@@ -104,7 +104,7 @@ export default function PharmacyHero() {
             </div>
           </div>
           <div className="text-center group">
-            <div className="relative w-18 h-18 bg-gradient-to-br from-error-500 to-error-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-error-500 to-error-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <ShieldCheckIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Compliance Ready</h3>

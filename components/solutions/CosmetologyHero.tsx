@@ -68,8 +68,8 @@ export default function CosmetologyHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
         >
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-pink-200/50 group hover:shadow-2xl hover:border-pink-300/70 transition-all duration-300 hover:scale-105">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <CameraIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Skin Analysis</h3>
@@ -80,7 +80,7 @@ export default function CosmetologyHero() {
             </div>
           </div>
           
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-pink-200/50 group hover:shadow-2xl hover:border-pink-300/70 transition-all duration-300 hover:scale-105">
             <div className="relative w-16 h-16 bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <SparklesIcon className="w-8 h-8 text-white" />
             </div>
@@ -92,8 +92,8 @@ export default function CosmetologyHero() {
             </div>
           </div>
           
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-pink-200/50 group hover:shadow-2xl hover:border-pink-300/70 transition-all duration-300 hover:scale-105">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <HeartIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Client Experience</h3>

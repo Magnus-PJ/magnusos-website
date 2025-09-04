@@ -5,8 +5,21 @@ import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline'
 
 export default function CallToAction() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-healthcare-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-healthcare-900 text-white relative overflow-hidden">
+      {/* AI Circuit Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="cta-circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M0,10 L20,10 M10,0 L10,20" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+              <circle cx="10" cy="10" r="1" fill="currentColor"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#cta-circuit)"/>
+        </svg>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,12 +62,12 @@ export default function CallToAction() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="group bg-white text-primary-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all duration-200 flex items-center space-x-3 shadow-lg hover:shadow-xl">
+            <button className="group bg-white text-primary-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all duration-200 flex items-center space-x-3 shadow-xl hover:shadow-2xl border-2 border-white/20 hover:border-primary-200 hover:scale-105">
               <span>Schedule a Demo</span>
               <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
-            <button className="group border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-200 flex items-center space-x-3">
+            <button className="group border-2 border-white/80 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary-900 transition-all duration-200 flex items-center space-x-3 backdrop-blur-sm hover:scale-105 shadow-lg hover:shadow-xl">
               <PlayIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               <span>Watch Demo Video</span>
             </button>

@@ -55,12 +55,12 @@ export default function AboutValues() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-lg border border-primary-100 hover:shadow-xl transition-all duration-300"
+              className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-primary-200/50 hover:shadow-2xl hover:border-primary-300/70 transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-start space-x-4">
                 <div className={`w-12 h-12 bg-gradient-to-r ${
                   value.color === 'primary' ? 'from-primary-500 to-healthcare-500' : 'from-healthcare-500 to-primary-500'
-                } rounded-xl flex items-center justify-center flex-shrink-0`}>
+                } rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg border-2 border-white/50`}>
                   <value.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">

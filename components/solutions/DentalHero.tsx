@@ -68,8 +68,8 @@ export default function DentalHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
         >
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-blue-200/50 group hover:shadow-2xl hover:border-blue-300/70 transition-all duration-300 hover:scale-105">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <CpuChipIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Diagnostic Aids</h3>
@@ -80,7 +80,7 @@ export default function DentalHero() {
             </div>
           </div>
           
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-blue-200/50 group hover:shadow-2xl hover:border-blue-300/70 transition-all duration-300 hover:scale-105">
             <div className="relative w-16 h-16 bg-gradient-to-br from-teal-500 via-blue-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <SparklesIcon className="w-8 h-8 text-white" />
             </div>
@@ -92,8 +92,8 @@ export default function DentalHero() {
             </div>
           </div>
           
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-blue-200/50 group hover:shadow-2xl hover:border-blue-300/70 transition-all duration-300 hover:scale-105">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300 border-2 border-white/50">
               <HeartIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Patient Experience</h3>

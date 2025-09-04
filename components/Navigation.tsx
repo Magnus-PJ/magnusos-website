@@ -129,7 +129,7 @@ export default function Navigation() {
                         transition={{ duration: 0.1, ease: "easeOut" }}
                         className="absolute right-0 z-10 mt-3 w-80"
                       >
-                        <div className="bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
+                        <div className="bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border-2 border-gray-200/50 overflow-hidden ring-4 ring-primary-100/30">
                           <div className="p-3">
                             {item.dropdown.map((dropdownItem, index) => (
                               <motion.div
@@ -141,7 +141,7 @@ export default function Navigation() {
                               >
                                 <Link 
                                   href={dropdownItem.href}
-                                  className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-primary-50 hover:to-healthcare-50 transition-all duration-300 border border-transparent hover:border-primary-200/50"
+                                  className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-primary-50 hover:to-healthcare-50 transition-all duration-300 border-2 border-transparent hover:border-primary-200/70 hover:shadow-md"
                                 >
                                   <span className="text-3xl filter drop-shadow-sm">{dropdownItem.icon}</span>
                                   <div className="flex-1">

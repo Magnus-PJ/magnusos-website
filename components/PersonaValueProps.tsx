@@ -199,8 +199,8 @@ export default function PersonaValueProps() {
                 onClick={() => setSelectedPersona(persona)}
                 className={`group relative p-8 rounded-3xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden ${
                   selectedPersona?.id === persona.id 
-                    ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl' 
-                    : 'border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white hover:border-primary-300 hover:shadow-xl'
+                    ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl ring-4 ring-primary-200/50' 
+                    : 'border-gray-200/50 bg-gradient-to-br from-white via-gray-50/80 to-white hover:border-primary-300/70 hover:shadow-xl hover:bg-gradient-to-br hover:from-primary-50/30 hover:via-white hover:to-healthcare-50/30'
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -208,11 +208,12 @@ export default function PersonaValueProps() {
                 transition={{ duration: 0.8, delay: index * 0.15 }}
                 whileHover={{ y: -12, scale: 1.03 }}
               >
-                {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-transparent to-healthcare-400"></div>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                {/* Enhanced AI Background Pattern */}
+                <div className="absolute inset-0 opacity-8 group-hover:opacity-15 transition-opacity duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 via-transparent to-healthcare-400/20"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200/30 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200/30 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                  <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 rounded-full -translate-x-8 -translate-y-8"></div>
                 </div>
                 
                 {/* AI Circuit Pattern Overlay */}
@@ -231,10 +232,10 @@ export default function PersonaValueProps() {
                 <div className="relative text-center space-y-6">
                   {/* Enhanced Icon Container */}
                   <div className="relative">
-                    <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 ${
+                    <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 border-2 ${
                       selectedPersona?.id === persona.id 
-                        ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110' 
-                        : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105'
+                        ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110 border-primary-400' 
+                        : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105 group-hover:border-primary-300 border-gray-300'
                     }`}>
                       <persona.icon className="w-10 h-10" />
                     </div>
@@ -282,8 +283,8 @@ export default function PersonaValueProps() {
                   onClick={() => setSelectedPersona(persona)}
                   className={`group relative p-8 rounded-3xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden ${
                     selectedPersona?.id === persona.id 
-                      ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl' 
-                      : 'border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white hover:border-primary-300 hover:shadow-xl'
+                      ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl ring-4 ring-primary-200/50' 
+                      : 'border-gray-200/50 bg-gradient-to-br from-white via-gray-50/80 to-white hover:border-primary-300/70 hover:shadow-xl hover:bg-gradient-to-br hover:from-primary-50/30 hover:via-white hover:to-healthcare-50/30'
                   }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -291,11 +292,12 @@ export default function PersonaValueProps() {
                   transition={{ duration: 0.8, delay: (index + 4) * 0.15 }}
                   whileHover={{ y: -12, scale: 1.03 }}
                 >
-                  {/* Animated Background Pattern */}
-                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-transparent to-healthcare-400"></div>
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                  {/* Enhanced AI Background Pattern */}
+                  <div className="absolute inset-0 opacity-8 group-hover:opacity-15 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400/20 via-transparent to-healthcare-400/20"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200/30 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200/30 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                    <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-r from-cyan-200/20 to-blue-200/20 rounded-full -translate-x-8 -translate-y-8"></div>
                   </div>
                   
                   {/* AI Circuit Pattern Overlay */}
@@ -314,10 +316,10 @@ export default function PersonaValueProps() {
                   <div className="relative text-center space-y-6">
                     {/* Enhanced Icon Container */}
                     <div className="relative">
-                      <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 ${
+                      <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 border-2 ${
                         selectedPersona?.id === persona.id 
-                          ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110' 
-                          : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105'
+                          ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110 border-primary-400' 
+                          : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105 group-hover:border-primary-300 border-gray-300'
                       }`}>
                         <persona.icon className="w-10 h-10" />
                       </div>
@@ -361,14 +363,14 @@ export default function PersonaValueProps() {
         {/* Selected Persona Content */}
         {selectedPersona && (
           <motion.div
-            className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100"
+            className="bg-gradient-to-br from-white via-primary-50/30 to-healthcare-50/30 rounded-3xl p-8 lg:p-12 shadow-2xl border-2 border-primary-200/50 ring-4 ring-primary-100/30"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-start justify-between mb-8">
               <div className="flex items-start space-x-6">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center shadow-lg">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center shadow-lg border-2 border-primary-300/50">
                   <selectedPersona.icon className="w-10 h-10 text-primary-600" />
                 </div>
                 <div className="flex-1">
@@ -387,22 +389,22 @@ export default function PersonaValueProps() {
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {selectedPersona.content.features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary-200 transition-colors duration-200">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary-500 to-healthcare-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div key={index} className="flex items-start space-x-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200/50 hover:border-primary-300/70 hover:bg-white/90 transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary-500 to-healthcare-500 flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/50 shadow-sm">
                     <div className="w-2 h-2 rounded-full bg-white"></div>
                   </div>
-                  <span className="text-gray-700 leading-relaxed">{feature}</span>
+                  <span className="text-gray-700 leading-relaxed font-medium">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Stats if available */}
             {selectedPersona.content.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 p-6 bg-gradient-to-r from-primary-50 to-healthcare-50 rounded-xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 p-6 bg-gradient-to-r from-primary-50/80 to-healthcare-50/80 rounded-xl border-2 border-primary-200/50 shadow-lg">
                 {selectedPersona.content.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
+                  <div key={index} className="text-center p-4 bg-white/60 rounded-lg border border-primary-100/50">
                     <div className="text-3xl font-bold text-primary-600 mb-2">{stat.number}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
+                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
