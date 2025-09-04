@@ -189,36 +189,104 @@ export default function PersonaValueProps() {
           </motion.p>
         </div>
 
-        {/* Persona Grid - Balanced Layout */}
+        {/* Enhanced Persona Grid - Tech-Savvy AI/Healthcare Theme */}
         <div className="mb-16">
           {/* First Row - 4 personas */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
             {personas.slice(0, 4).map((persona, index) => (
               <motion.button
                 key={persona.id}
                 onClick={() => setSelectedPersona(persona)}
-                className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                className={`group relative p-8 rounded-3xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden ${
                   selectedPersona?.id === persona.id 
-                    ? 'border-primary-500 bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg' 
-                    : 'border-gray-200 bg-white hover:border-primary-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-white'
+                    ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl' 
+                    : 'border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white hover:border-primary-300 hover:shadow-xl'
                 }`}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                whileHover={{ y: -12, scale: 1.03 }}
               >
-                <div className="text-center space-y-4">
-                  <div className={`mx-auto w-14 h-14 rounded-2xl flex items-center justify-center shadow-md transition-all duration-300 ${
-                    selectedPersona?.id === persona.id 
-                      ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-lg' 
-                      : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-600 group-hover:from-primary-100 group-hover:to-primary-200 group-hover:text-primary-600'
-                  }`}>
-                    <persona.icon className="w-7 h-7" />
+                {/* Animated Background Pattern */}
+                <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-transparent to-healthcare-400"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                </div>
+                
+                {/* AI Circuit Pattern Overlay */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                  <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <defs>
+                      <pattern id={`circuit-${index}`} x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <path d="M0,10 L20,10 M10,0 L10,20" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                      </pattern>
+                    </defs>
+                    <rect width="100" height="100" fill={`url(#circuit-${index})`}/>
+                  </svg>
+                </div>
+
+                <div className="relative text-center space-y-6">
+                  {/* Enhanced Icon Container */}
+                  <div className="relative">
+                    <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 ${
+                      selectedPersona?.id === persona.id 
+                        ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110' 
+                        : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105'
+                    }`}>
+                      <persona.icon className="w-10 h-10" />
+                    </div>
+                    
+                    {/* Floating AI Elements */}
+                    <motion.div
+                      className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg"
+                      animate={{ 
+                        scale: [1, 1.2, 1],
+                        rotate: [0, 180, 360]
+                      }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </motion.div>
+                    
+                    <motion.div
+                      className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full shadow-md"
+                      animate={{ 
+                        scale: [1, 1.3, 1],
+                        opacity: [0.7, 1, 0.7]
+                      }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                    />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-sm leading-tight">{persona.name}</h3>
-                    <p className="text-xs text-gray-500 mt-2 leading-relaxed">{persona.description}</p>
+                  
+                  {/* Enhanced Text Content */}
+                  <div className="space-y-3">
+                    <h3 className={`font-bold text-base leading-tight transition-colors duration-300 ${
+                      selectedPersona?.id === persona.id 
+                        ? 'text-primary-800' 
+                        : 'text-gray-900 group-hover:text-primary-700'
+                    }`}>
+                      {persona.name}
+                    </h3>
+                    <p className={`text-sm leading-relaxed transition-colors duration-300 ${
+                      selectedPersona?.id === persona.id 
+                        ? 'text-primary-600' 
+                        : 'text-gray-500 group-hover:text-gray-600'
+                    }`}>
+                      {persona.description}
+                    </p>
+                  </div>
+                  
+                  {/* Tech Indicator */}
+                  <div className={`flex items-center justify-center space-x-2 text-xs font-medium transition-colors duration-300 ${
+                    selectedPersona?.id === persona.id 
+                      ? 'text-primary-600' 
+                      : 'text-gray-400 group-hover:text-primary-500'
+                  }`}>
+                    <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
+                    <span>AI-Powered</span>
                   </div>
                 </div>
               </motion.button>
@@ -227,33 +295,101 @@ export default function PersonaValueProps() {
           
           {/* Second Row - 3 personas centered */}
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
               {personas.slice(4, 7).map((persona, index) => (
                 <motion.button
                   key={persona.id}
                   onClick={() => setSelectedPersona(persona)}
-                  className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                  className={`group relative p-8 rounded-3xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden ${
                     selectedPersona?.id === persona.id 
-                      ? 'border-primary-500 bg-gradient-to-br from-primary-50 to-primary-100 shadow-lg' 
-                      : 'border-gray-200 bg-white hover:border-primary-300 hover:bg-gradient-to-br hover:from-gray-50 hover:to-white'
+                      ? 'border-primary-500 bg-gradient-to-br from-primary-50 via-white to-healthcare-50 shadow-2xl' 
+                      : 'border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white hover:border-primary-300 hover:shadow-xl'
                   }`}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (index + 4) * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.02 }}
+                  transition={{ duration: 0.8, delay: (index + 4) * 0.15 }}
+                  whileHover={{ y: -12, scale: 1.03 }}
                 >
-                  <div className="text-center space-y-4">
-                    <div className={`mx-auto w-14 h-14 rounded-2xl flex items-center justify-center shadow-md transition-all duration-300 ${
-                      selectedPersona?.id === persona.id 
-                        ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-lg' 
-                        : 'bg-gradient-to-br from-gray-100 to-gray-200 text-gray-600 group-hover:from-primary-100 group-hover:to-primary-200 group-hover:text-primary-600'
-                    }`}>
-                      <persona.icon className="w-7 h-7" />
+                  {/* Animated Background Pattern */}
+                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 via-transparent to-healthcare-400"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary-200 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-healthcare-200 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+                  </div>
+                  
+                  {/* AI Circuit Pattern Overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <defs>
+                        <pattern id={`circuit-${index + 4}`} x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                          <path d="M0,10 L20,10 M10,0 L10,20" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+                          <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100" height="100" fill={`url(#circuit-${index + 4})`}/>
+                    </svg>
+                  </div>
+
+                  <div className="relative text-center space-y-6">
+                    {/* Enhanced Icon Container */}
+                    <div className="relative">
+                      <div className={`mx-auto w-20 h-20 rounded-3xl flex items-center justify-center shadow-xl transition-all duration-500 ${
+                        selectedPersona?.id === persona.id 
+                          ? 'bg-gradient-to-br from-primary-500 via-primary-600 to-healthcare-600 text-white shadow-2xl scale-110' 
+                          : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-600 group-hover:from-primary-100 group-hover:via-primary-200 group-hover:to-healthcare-200 group-hover:text-primary-700 group-hover:scale-105'
+                      }`}>
+                        <persona.icon className="w-10 h-10" />
+                      </div>
+                      
+                      {/* Floating AI Elements */}
+                      <motion.div
+                        className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg"
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 180, 360]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                      >
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </motion.div>
+                      
+                      <motion.div
+                        className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full shadow-md"
+                        animate={{ 
+                          scale: [1, 1.3, 1],
+                          opacity: [0.7, 1, 0.7]
+                        }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                      />
                     </div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 text-sm leading-tight">{persona.name}</h3>
-                      <p className="text-xs text-gray-500 mt-2 leading-relaxed">{persona.description}</p>
+                    
+                    {/* Enhanced Text Content */}
+                    <div className="space-y-3">
+                      <h3 className={`font-bold text-base leading-tight transition-colors duration-300 ${
+                        selectedPersona?.id === persona.id 
+                          ? 'text-primary-800' 
+                          : 'text-gray-900 group-hover:text-primary-700'
+                      }`}>
+                        {persona.name}
+                      </h3>
+                      <p className={`text-sm leading-relaxed transition-colors duration-300 ${
+                        selectedPersona?.id === persona.id 
+                          ? 'text-primary-600' 
+                          : 'text-gray-500 group-hover:text-gray-600'
+                      }`}>
+                        {persona.description}
+                      </p>
+                    </div>
+                    
+                    {/* Tech Indicator */}
+                    <div className={`flex items-center justify-center space-x-2 text-xs font-medium transition-colors duration-300 ${
+                      selectedPersona?.id === persona.id 
+                        ? 'text-primary-600' 
+                        : 'text-gray-400 group-hover:text-primary-500'
+                    }`}>
+                      <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
+                      <span>AI-Powered</span>
                     </div>
                   </div>
                 </motion.button>

@@ -78,23 +78,32 @@ export default function AboutPage() {
           <div className="bg-gradient-to-r from-primary-50 to-healthcare-50 rounded-2xl p-8 border border-primary-100">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Commitment</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🏥</span>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="relative">
+                    <span className="text-white text-2xl">🏥</span>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse"></div>
+                  </div>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Patient-Centric</h3>
                 <p className="text-gray-600 text-sm">Every solution is designed with patient outcomes as the primary focus</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-healthcare-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🔒</span>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-healthcare-500 to-healthcare-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="relative">
+                    <span className="text-white text-2xl">🔒</span>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-pulse"></div>
+                  </div>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Security First</h3>
                 <p className="text-gray-600 text-sm">HIPAA, GDPR, and NDHM compliance built into every feature</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🚀</span>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-healthcare-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <div className="relative">
+                    <span className="text-white text-2xl">🚀</span>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></div>
+                  </div>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Innovation Driven</h3>
                 <p className="text-gray-600 text-sm">Continuous innovation in AI and healthcare technology</p>
