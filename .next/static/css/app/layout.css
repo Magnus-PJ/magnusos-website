@@ -4881,6 +4881,14 @@ select {
     display: none;
   }
 
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .lg\:flex-1 {
     flex: 1 1 0%;
   }

@@ -56,14 +56,14 @@ export default function Footer() {
       <div className="container-padding max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-            {/* Company Info */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Company Info - Left Side */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-2 lg:col-span-2"
+              className="lg:w-1/3"
             >
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-teal-500 rounded-lg flex items-center justify-center">
@@ -92,93 +92,98 @@ export default function Footer() {
               </div>
             </motion.div>
 
-            {/* Solutions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h3 className="text-lg font-semibold mb-6 text-white">Solutions</h3>
-              <ul className="space-y-3">
-                {footerLinks.solutions.map((link) => (
-                  <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            {/* Right Side - 4 Equal Columns */}
+            <div className="lg:w-2/3">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                {/* Solutions */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  <h3 className="text-lg font-semibold mb-6 text-white">Solutions</h3>
+                  <ul className="space-y-3">
+                    {footerLinks.solutions.map((link) => (
+                      <li key={link.name}>
+                        <a 
+                          href={link.href} 
+                          className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
 
-            {/* Company */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h3 className="text-lg font-semibold mb-6 text-white">Company</h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                {/* Company */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <h3 className="text-lg font-semibold mb-6 text-white">Company</h3>
+                  <ul className="space-y-3">
+                    {footerLinks.company.map((link) => (
+                      <li key={link.name}>
+                        <a 
+                          href={link.href} 
+                          className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
 
-            {/* Resources */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
-                  <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                {/* Resources */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
+                  <ul className="space-y-3">
+                    {footerLinks.resources.map((link) => (
+                      <li key={link.name}>
+                        <a 
+                          href={link.href} 
+                          className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
 
-            {/* Compliance */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h3 className="text-lg font-semibold mb-6 text-white">Compliance</h3>
-              <ul className="space-y-3">
-                {footerLinks.compliance.map((link) => (
-                  <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                {/* Compliance */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <h3 className="text-lg font-semibold mb-6 text-white">Compliance</h3>
+                  <ul className="space-y-3">
+                    {footerLinks.compliance.map((link) => (
+                      <li key={link.name}>
+                        <a 
+                          href={link.href} 
+                          className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </div>
 
