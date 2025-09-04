@@ -13,10 +13,16 @@ const navigation = [
     dropdown: [
       { name: 'Hospital Information System', href: '/solutions/his', description: 'Complete hospital management platform', icon: '🏥' },
       { name: 'Radiology & Imaging', href: '/solutions/radiology', description: 'AI-powered PACS and imaging workflow', icon: '📷' },
-      { name: 'Fertility Clinics', href: '/solutions/fertility', description: 'IVF and fertility management software', icon: '👶' },
       { name: 'Laboratory Management', href: '/solutions/laboratory', description: 'Lab workflow and result management', icon: '🧪' },
       { name: 'Pharmacy & CRM', href: '/solutions/pharmacy-crm', description: 'Pharmacy operations and patient CRM', icon: '💊' },
-      { name: 'ERP & Operations', href: '/solutions/erp', description: 'Enterprise resource planning for healthcare', icon: '⚙️' },
+      { name: 'ERP & Operations', href: '/solutions/erp', description: 'Enterprise resource planning for healthcare', icon: '⚙️' }
+    ]
+  },
+  { 
+    name: 'Specialties', 
+    href: '#',
+    dropdown: [
+      { name: 'Fertility Clinics', href: '/solutions/fertility', description: 'IVF and fertility management software', icon: '👶' },
       { name: 'Cosmetology & Aesthetics', href: '/solutions/cosmetology', description: 'Aesthetic clinic management', icon: '✨' },
       { name: 'Dental Care', href: '/solutions/dental', description: 'Dental practice management system', icon: '🦷' },
       { name: 'Nuclear Medicine', href: '/solutions/nuclear-medicine', description: 'Nuclear medicine workflow software', icon: '☢️' }
@@ -24,16 +30,14 @@ const navigation = [
   },
   { name: 'About', href: '/about' },
   { name: 'Resources', href: '/resources' },
+  { name: 'Blog', href: '/blog' },
   { 
-    name: 'More', 
+    name: 'Company', 
     href: '#',
     dropdown: [
-      { name: 'Blog', href: '/blog', description: 'Healthcare technology insights and trends', icon: '📝' },
       { name: 'Careers', href: '/careers', description: 'Join our mission to transform healthcare', icon: '💼' },
-      { name: 'Support', href: '/support', description: 'Get help and technical support', icon: '🆘' },
-      { name: 'Privacy Policy', href: '/privacy', description: 'How we protect your data and privacy', icon: '🔒' },
-      { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions for our services', icon: '📋' },
-      { name: 'Revenue Model', href: '/revenue-model', description: 'Pricing and subscription options', icon: '💰' }
+      { name: 'Revenue Model', href: '/revenue-model', description: 'Pricing and subscription options', icon: '💰' },
+      { name: 'Support', href: '/support', description: 'Get help and technical support', icon: '🆘' }
     ]
   },
   { name: 'Contact', href: '/contact' }

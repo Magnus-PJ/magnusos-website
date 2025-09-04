@@ -1,12 +1,10 @@
 {
-  "/about/page": "app/about/page.js",
-  "/careers/page": "app/careers/page.js",
-  "/contact/page": "app/contact/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
   "/blog/page": "app/blog/page.js",
-  "/resources/page": "app/resources/page.js",
   "/solutions/his/page": "app/solutions/his/page.js",
-  "/solutions/radiology/page": "app/solutions/radiology/page.js",
   "/solutions/fertility/page": "app/solutions/fertility/page.js",
-  "/solutions/laboratory/page": "app/solutions/laboratory/page.js"
+  "/solutions/dental/page": "app/solutions/dental/page.js"
 }
