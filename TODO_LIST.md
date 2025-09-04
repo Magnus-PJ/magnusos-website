@@ -15,10 +15,22 @@
 - [ ] Standardize page layouts and margins
 
 ### **3. Persona Selection Boxes Issues**
-- [ ] **CRITICAL**: Persona selection boxes are asymmetrical and clunky
-- [ ] **CRITICAL**: One box is missing, causing uneven layout
-- [ ] **CRITICAL**: Need better arrangement for visual balance
-- [ ] **CRITICAL**: Make persona selection look less clunky and more appealing
+- [x] **COMPLETED**: Persona selection boxes are asymmetrical and clunky
+- [x] **COMPLETED**: One box is missing, causing uneven layout
+- [x] **COMPLETED**: Need better arrangement for visual balance
+- [x] **COMPLETED**: Make persona selection look less clunky and more appealing
+
+### **4. Page Navigation & Performance Issues**
+- [x] **PARTIALLY FIXED**: Page navigation from navigation bar has issues (Fixed missing RISResults component)
+- [x] **PARTIALLY FIXED**: Page loading is super slow in some modules (Fixed 500 errors, still need optimization)
+- [ ] **IN PROGRESS**: Need to optimize loading performance across all pages
+- [ ] **IN PROGRESS**: Investigate and fix slow-loading modules (Radiology still at 1.06s, About at 0.74s)
+
+### **5. Subpage Theming Inconsistencies**
+- [ ] **CRITICAL**: Some subpages need detailed work in theme consistency
+- [ ] **CRITICAL**: Inconsistent theming quality across different pages
+- [ ] **CRITICAL**: Some pages are well-themed while others are badly themed
+- [ ] **CRITICAL**: Standardize theming and visual consistency across all subpages
 
 ## 🔧 **COMPLETED TASKS**
 
