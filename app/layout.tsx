@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
+import Navigation from '@/components/Navigation'
 import './globals.css'
 
 const inter = Inter({ 
@@ -111,6 +112,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0ea5e9" />
       </head>
       <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+        <Navigation />
         {children}
       </body>
     </html>
