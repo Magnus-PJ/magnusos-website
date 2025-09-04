@@ -60,19 +60,35 @@ const testimonials = [
 
 export default function RISResults() {
   return (
-    <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-      <div className="container-padding max-w-7xl mx-auto">
+    <section className="section-padding bg-gradient-to-br from-healthcare-50/30 via-white to-primary-50/30 relative overflow-hidden">
+      {/* AI Circuit Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="ris-circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M0,10 L20,10 M10,0 L10,20" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+              <circle cx="10" cy="10" r="1" fill="currentColor"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#ris-circuit)"/>
+        </svg>
+      </div>
+      
+      <div className="container-padding max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <motion.h2 
-            className="heading-2 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Proven Results in Radiology Departments
-          </motion.h2>
+                      <motion.h2 
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              Proven Results in 
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-600 to-primary-600">
+                Radiology Departments
+              </span>
+            </motion.h2>
           <motion.p 
             className="body-large max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -86,11 +102,11 @@ export default function RISResults() {
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
-              className="text-center"
+              className="text-center group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -99,9 +115,9 @@ export default function RISResults() {
               <div className={`w-20 h-20 bg-gradient-to-br from-${metric.color}-100 to-${metric.color}-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-${metric.color}-300/50 group-hover:scale-105 transition-transform duration-300`}>
                 <metric.icon className={`w-10 h-10 text-${metric.color}-600`} />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">{metric.title}</div>
-              <div className="font-semibold text-gray-700 mb-2">{metric.subtitle}</div>
-              <p className="text-sm text-gray-600">{metric.description}</p>
+              <div className="text-4xl font-bold text-gray-900 mb-3 group-hover:scale-110 transition-transform duration-300">{metric.title}</div>
+              <div className="font-semibold text-gray-700 mb-3">{metric.subtitle}</div>
+              <p className="text-sm text-gray-600 leading-relaxed">{metric.description}</p>
             </motion.div>
           ))}
         </div>
@@ -114,9 +130,9 @@ export default function RISResults() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="text-center mb-8">
-            <h3 className="heading-3 mb-4">Success Stories from Radiology Leaders</h3>
-            <p className="body-large text-gray-600">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Success Stories from Radiology Leaders</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Real radiologists, real results - see how MagnusOS is transforming imaging departments
             </p>
           </div>
@@ -150,9 +166,9 @@ export default function RISResults() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="text-center mb-8">
-            <h3 className="heading-3 mb-4">Before vs. After MagnusOS RIS</h3>
-            <p className="body-large text-gray-600">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Before vs. After MagnusOS RIS</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               See the dramatic transformation in radiology operations
             </p>
           </div>
@@ -232,8 +248,8 @@ export default function RISResults() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="heading-3 mb-4">Calculate Your Radiology ROI</h3>
-          <p className="body-large mb-8 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Calculate Your Radiology ROI</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             See how much MagnusOS RIS can save your radiology department in terms of time, efficiency, and diagnostic accuracy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

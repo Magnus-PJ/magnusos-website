@@ -1,7 +1,7 @@
 {
-  "/page": "app/page.js",
   "/solutions/his/page": "app/solutions/his/page.js",
-  "/solutions/nuclear-medicine/page": "app/solutions/nuclear-medicine/page.js",
   "/careers/page": "app/careers/page.js",
-  "/revenue-model/page": "app/revenue-model/page.js"
+  "/revenue-model/page": "app/revenue-model/page.js",
+  "/solutions/radiology/page": "app/solutions/radiology/page.js",
+  "/solutions/fertility/page": "app/solutions/fertility/page.js"
 }
