@@ -70,33 +70,81 @@ export default function PharmacyHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="text-center">
-            <div className="w-16 h-16 bg-warning-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <PillIcon className="w-8 h-8 text-warning-600" />
+          <div className="text-center group">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-warning-500 to-warning-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <PillIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Smart Inventory</h3>
             <p className="text-sm text-gray-600">AI-driven stock optimization</p>
+            <div className="flex items-center justify-center mt-2 text-xs text-warning-600 font-medium">
+              <div className="w-2 h-2 bg-warning-500 rounded-full animate-pulse mr-2"></div>
+              <span>AI-Powered</span>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <ChartBarIcon className="w-8 h-8 text-primary-600" />
+          <div className="text-center group">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <ChartBarIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Patient CRM</h3>
             <p className="text-sm text-gray-600">Comprehensive engagement</p>
+            <div className="flex items-center justify-center mt-2 text-xs text-primary-600 font-medium">
+              <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse mr-2"></div>
+              <span>Smart CRM</span>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <CogIcon className="w-8 h-8 text-success-600" />
+          <div className="text-center group">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-success-500 to-success-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <CogIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Workflow Automation</h3>
             <p className="text-sm text-gray-600">Streamlined processes</p>
+            <div className="flex items-center justify-center mt-2 text-xs text-success-600 font-medium">
+              <div className="w-2 h-2 bg-success-500 rounded-full animate-pulse mr-2"></div>
+              <span>Automated</span>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-error-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <ShieldCheckIcon className="w-8 h-8 text-error-600" />
+          <div className="text-center group">
+            <div className="relative w-18 h-18 bg-gradient-to-br from-error-500 to-error-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <ShieldCheckIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-red-400 to-pink-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </div>
             <h3 className="font-semibold text-gray-900 mb-2">Compliance Ready</h3>
             <p className="text-sm text-gray-600">HIPAA, FDA, DEA certified</p>
+            <div className="flex items-center justify-center mt-2 text-xs text-error-600 font-medium">
+              <div className="w-2 h-2 bg-error-500 rounded-full animate-pulse mr-2"></div>
+              <span>Secure</span>
+            </div>
           </div>
         </motion.div>
 

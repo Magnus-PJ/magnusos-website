@@ -1,7 +1,9 @@
 {
-  "/page": "app/page.js",
   "/solutions/his/page": "app/solutions/his/page.js",
   "/solutions/radiology/page": "app/solutions/radiology/page.js",
   "/solutions/laboratory/page": "app/solutions/laboratory/page.js",
-  "/about/page": "app/about/page.js"
+  "/solutions/cosmetology/page": "app/solutions/cosmetology/page.js",
+  "/solutions/dental/page": "app/solutions/dental/page.js",
+  "/solutions/fertility/page": "app/solutions/fertility/page.js",
+  "/solutions/pharmacy-crm/page": "app/solutions/pharmacy-crm/page.js"
 }

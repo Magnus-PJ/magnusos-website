@@ -68,28 +68,64 @@ export default function DentalHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <CpuChipIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <CpuChipIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Diagnostic Aids</h3>
             <p className="text-gray-600">Automatically detect cavities, calculus, and pathologies on X-rays with AI-powered analysis</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-blue-600 font-medium">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse mr-2"></div>
+              <span>AI-Powered</span>
+            </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <SparklesIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-teal-500 via-blue-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <SparklesIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Digital Charting</h3>
             <p className="text-gray-600">Comprehensive dental records with visual tooth charts and integrated imaging</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-teal-600 font-medium">
+              <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse mr-2"></div>
+              <span>Digital-First</span>
+            </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <HeartIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <HeartIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Patient Experience</h3>
             <p className="text-gray-600">Visual treatment plans and secure patient portals for better engagement</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-blue-600 font-medium">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse mr-2"></div>
+              <span>Patient-Centric</span>
+            </div>
           </div>
         </motion.div>
 

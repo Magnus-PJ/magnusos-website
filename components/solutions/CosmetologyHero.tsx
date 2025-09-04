@@ -68,28 +68,64 @@ export default function CosmetologyHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <CameraIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <CameraIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Skin Analysis</h3>
             <p className="text-gray-600">Quantify wrinkles, detect hyperpigmentation, and track improvements with AI-powered analysis</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-pink-600 font-medium">
+              <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse mr-2"></div>
+              <span>AI-Powered</span>
+            </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <SparklesIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <SparklesIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AR Treatment Planning</h3>
             <p className="text-gray-600">Show clients realistic previews of results using advanced AR visualization tools</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-purple-600 font-medium">
+              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse mr-2"></div>
+              <span>AR-Enhanced</span>
+            </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
-            <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <HeartIcon className="w-6 h-6 text-white" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <HeartIcon className="w-8 h-8 text-white" />
+              <motion.div
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Client Experience</h3>
             <p className="text-gray-600">Build trust through transparency with before/after photos and personalized care</p>
+            <div className="flex items-center justify-center mt-3 text-xs text-pink-600 font-medium">
+              <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse mr-2"></div>
+              <span>Personalized</span>
+            </div>
           </div>
         </motion.div>
 

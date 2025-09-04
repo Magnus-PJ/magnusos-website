@@ -40,6 +40,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/solutions/laboratory/page.js"
+    ],
+    "/solutions/cosmetology/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/cosmetology/page.js"
+    ],
+    "/solutions/dental/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/dental/page.js"
+    ],
+    "/solutions/pharmacy-crm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/pharmacy-crm/page.js"
     ]
   }
 }
