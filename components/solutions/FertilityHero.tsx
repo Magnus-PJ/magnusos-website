@@ -129,19 +129,6 @@ export default function FertilityHero() {
         </motion.div>
       </div>
 
-      {/* Floating Elements */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full opacity-20 animate-bounce"
-      ></motion.div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute top-1/4 left-10 w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full opacity-20 animate-bounce animation-delay-1000"
-      ></motion.div>
     </section>
   )
 }

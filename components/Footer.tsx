@@ -58,9 +58,9 @@ export default function Footer() {
       <div className="container-padding max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
-            <div className="lg:col-span-2 xl:col-span-1">
+            <div className="md:col-span-2 lg:col-span-1">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function Footer() {
               </ul>
             </motion.div>
 
-            {/* Resources & Compliance */}
+            {/* Resources */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <a 
@@ -159,7 +159,15 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+            </motion.div>
 
+            {/* Compliance */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <h3 className="text-lg font-semibold mb-6 text-white">Compliance</h3>
               <ul className="space-y-3">
                 {footerLinks.compliance.map((link) => (
@@ -211,34 +219,37 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             {/* Copyright */}
-            <div className="text-gray-400 text-sm">
+            <div className="text-gray-400 text-sm text-center lg:text-left">
               © 2025 MagnusOS.ai. All rights reserved. A product of MagnusOS Healthcare Technologies.
             </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
+            {/* Social Links & Language */}
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
+              {/* Social Links */}
+              <div className="flex space-x-6">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
 
-            {/* Language Selector */}
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <GlobeAltIcon className="w-4 h-4" />
-              <select className="bg-transparent border-none focus:outline-none focus:ring-0">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="hi">हिंदी</option>
-              </select>
+              {/* Language Selector */}
+              <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                <GlobeAltIcon className="w-4 h-4" />
+                <select className="bg-transparent border-none focus:outline-none focus:ring-0">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="hi">हिंदी</option>
+                </select>
+              </div>
             </div>
           </div>
         </motion.div>
