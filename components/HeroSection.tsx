@@ -19,10 +19,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-12"
         >
           {/* Main Tagline */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <motion.h1 
               className="heading-1 text-balance"
               initial={{ opacity: 0, y: 30 }}
@@ -46,7 +46,7 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -63,22 +63,22 @@ export default function HeroSection() {
 
           {/* Stats */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-16"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">30%</div>
-              <div className="text-gray-600">Reduction in Admin Overhead</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-primary-600 mb-3 group-hover:scale-110 transition-transform duration-300">30%</div>
+              <div className="text-gray-600 font-medium">Reduction in Admin Overhead</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-healthcare-600 mb-2">50%</div>
-              <div className="text-gray-600">Faster Critical Case Detection</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-healthcare-600 mb-3 group-hover:scale-110 transition-transform duration-300">50%</div>
+              <div className="text-gray-600 font-medium">Faster Critical Case Detection</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-success-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime with Hybrid Cloud</div>
+            <div className="text-center group">
+              <div className="text-4xl font-bold text-success-600 mb-3 group-hover:scale-110 transition-transform duration-300">99.9%</div>
+              <div className="text-gray-600 font-medium">Uptime with Hybrid Cloud</div>
             </div>
           </motion.div>
         </motion.div>

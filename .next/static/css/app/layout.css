@@ -2256,6 +2256,9 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-24 {
+  margin-bottom: 6rem;
+}
 .block {
   display: block;
 }
@@ -2600,6 +2603,9 @@ select {
 .gap-8 {
   gap: 2rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -2663,6 +2669,11 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -3110,6 +3121,9 @@ select {
 }
 .bg-white\/60 {
   background-color: rgb(255 255 255 / 0.6);
+}
+.bg-gray-50\/80 {
+  background-color: rgb(249 250 251 / 0.8);
 }
 .bg-\[url\(\'\/images\/hospital-bg\.jpg\'\)\] {
   background-image: url('/images/hospital-bg.jpg');
@@ -3905,6 +3919,9 @@ select {
 .font-semibold {
   font-weight: 600;
 }
+.font-extrabold {
+  font-weight: 800;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -4442,6 +4459,9 @@ select {
 }
 .hover\:border-blue-300\/70:hover {
   border-color: rgb(147 197 253 / 0.7);
+}
+.hover\:border-primary-300\/50:hover {
+  border-color: rgb(125 211 252 / 0.5);
 }
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;

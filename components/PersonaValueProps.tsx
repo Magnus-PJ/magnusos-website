@@ -168,7 +168,7 @@ export default function PersonaValueProps() {
     <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
       <div className="container-padding max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <motion.h2 
             className="heading-2 mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -190,9 +190,9 @@ export default function PersonaValueProps() {
         </div>
 
         {/* Enhanced Persona Grid - Tech-Savvy AI/Healthcare Theme */}
-        <div className="mb-16">
+        <div className="mb-20">
           {/* First Row - 4 personas */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             {personas.slice(0, 4).map((persona, index) => (
               <motion.button
                 key={persona.id}
@@ -276,7 +276,7 @@ export default function PersonaValueProps() {
           
           {/* Second Row - 3 personas centered */}
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl">
               {personas.slice(4, 7).map((persona, index) => (
                 <motion.button
                   key={persona.id}

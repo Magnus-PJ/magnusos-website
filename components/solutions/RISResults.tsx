@@ -96,7 +96,7 @@ export default function RISResults() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className={`w-20 h-20 bg-${metric.color}-100 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <div className={`w-20 h-20 bg-gradient-to-br from-${metric.color}-100 to-${metric.color}-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-${metric.color}-300/50 group-hover:scale-105 transition-transform duration-300`}>
                 <metric.icon className={`w-10 h-10 text-${metric.color}-600`} />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">{metric.title}</div>
@@ -108,7 +108,7 @@ export default function RISResults() {
 
         {/* Success Stories */}
         <motion.div 
-          className="bg-white rounded-2xl p-8 lg:p-12 shadow-medium border border-gray-100 mb-16"
+          className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-xl border-2 border-gray-200/50 mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -123,7 +123,7 @@ export default function RISResults() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
+              <div key={index} className="bg-gray-50/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 hover:border-primary-300/50 transition-colors duration-300">
                 <blockquote className="text-gray-700 italic mb-4">
                   "{testimonial.quote}"
                 </blockquote>
@@ -159,7 +159,7 @@ export default function RISResults() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Before */}
-            <div className="bg-white rounded-xl p-6 shadow-medium">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-gray-200/50 hover:border-primary-300/50 transition-all duration-300">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <ChartBarIcon className="w-8 h-8 text-red-600" />
@@ -191,7 +191,7 @@ export default function RISResults() {
             </div>
 
             {/* After */}
-            <div className="bg-white rounded-xl p-6 shadow-medium">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg border-2 border-gray-200/50 hover:border-primary-300/50 transition-all duration-300">
               <div className="text-center mb-4">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <ArrowTrendingUpIcon className="w-8 h-8 text-green-600" />

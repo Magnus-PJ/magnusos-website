@@ -46,7 +46,7 @@ export default function MagnusOSHighlights() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <motion.h2 
             className="heading-2 mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export default function MagnusOSHighlights() {
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
           {highlights.map((highlight, index) => (
             <motion.div
               key={index}

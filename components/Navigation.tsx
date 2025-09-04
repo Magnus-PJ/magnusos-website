@@ -92,10 +92,11 @@ export default function Navigation() {
                 
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight">
-                  MagnusOS.ai
-                </span>
-                <span className="text-xs font-semibold text-primary-600 tracking-widest uppercase">AI-First Healthcare Platform</span>
+                            <span className="text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight tracking-tight">
+              MagnusOS
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">.ai</span>
+            </span>
+            <span className="text-xs font-semibold text-primary-600 tracking-widest uppercase bg-gradient-to-r from-primary-50 to-healthcare-50 px-2 py-1 rounded-full">AI-First Healthcare Platform</span>
               </div>
             </motion.div>
           </Link>
