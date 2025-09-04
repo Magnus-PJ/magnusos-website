@@ -1,9 +1,13 @@
 {
+  "/revenue-model/page": "app/revenue-model/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/support/page": "app/support/page.js",
   "/page": "app/page.js",
+  "/terms/page": "app/terms/page.js",
   "/about/page": "app/about/page.js",
-  "/resources/page": "app/resources/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/solutions/radiology/page": "app/solutions/radiology/page.js",
   "/solutions/his/page": "app/solutions/his/page.js",
+  "/solutions/radiology/page": "app/solutions/radiology/page.js",
   "/solutions/fertility/page": "app/solutions/fertility/page.js"
 }

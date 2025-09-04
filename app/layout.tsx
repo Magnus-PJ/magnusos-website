@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const inter = Inter({ 
@@ -114,6 +115,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased bg-white text-gray-900`}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   )
