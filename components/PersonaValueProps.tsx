@@ -244,7 +244,7 @@ export default function PersonaValueProps() {
                   
                   {/* Enhanced Text Content - Mobile Optimized */}
                   <div className="space-y-2 sm:space-y-3">
-                    <h3 className={`font-bold text-sm sm:text-base leading-tight transition-colors duration-300 ${
+                    <h3 className={`font-bold text-sm sm:text-base leading-normal px-2 py-1 transition-colors duration-300 ${
                       selectedPersona?.id === persona.id 
                         ? 'text-primary-800' 
                         : 'text-gray-900 group-hover:text-primary-700'
@@ -329,7 +329,7 @@ export default function PersonaValueProps() {
                     
                     {/* Enhanced Text Content - Mobile Optimized */}
                     <div className="space-y-2 sm:space-y-3">
-                      <h3 className={`font-bold text-sm sm:text-base leading-tight transition-colors duration-300 ${
+                      <h3 className={`font-bold text-sm sm:text-base leading-normal px-2 py-1 transition-colors duration-300 ${
                         selectedPersona?.id === persona.id 
                           ? 'text-primary-800' 
                           : 'text-gray-900 group-hover:text-primary-700'

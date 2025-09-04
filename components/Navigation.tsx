@@ -97,7 +97,7 @@ export default function Navigation() {
             >
               <div className="relative">
                 <div className="w-10 h-10 lg:w-14 lg:h-14 bg-gradient-to-br from-primary-600 via-healthcare-600 to-primary-700 rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-xl lg:shadow-2xl group-hover:shadow-2xl lg:group-hover:shadow-3xl transition-all duration-300 border border-white/20">
-                  <span className="text-white font-bold text-xl lg:text-3xl tracking-tight">M</span>
+                  <span className="text-white font-bold text-xl lg:text-3xl tracking-tight leading-normal px-1 py-1">M</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-2xl lg:rounded-3xl"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl lg:rounded-3xl"></div>
                 </div>

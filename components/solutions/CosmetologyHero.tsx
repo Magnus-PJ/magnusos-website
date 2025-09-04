@@ -25,7 +25,7 @@ export default function CosmetologyHero() {
             <span className="text-sm font-medium text-pink-700">Beauty Meets Technology</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-normal px-4 py-2">
             <span className="bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Cosmetology & Aesthetics
             </span>

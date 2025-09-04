@@ -1935,9 +1935,14 @@ select {
 /* Healthcare-specific styles */
 /* Responsive typography */
 .heading-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
+  line-height: 1.5;
   letter-spacing: -0.025em;
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
@@ -1957,9 +1962,14 @@ select {
   }
 }
 .heading-2 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
+  line-height: 1.5;
   letter-spacing: -0.025em;
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
@@ -3831,6 +3841,10 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;

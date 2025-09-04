@@ -50,7 +50,7 @@ export default function RISHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-normal px-4 py-2"
           >
             AI-Powered
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-healthcare-200 to-primary-200">

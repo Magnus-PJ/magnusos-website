@@ -27,7 +27,7 @@ export default function LaboratoryHero() {
         </motion.div>
 
         <motion.h1
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-8"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-8 leading-normal px-4 py-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

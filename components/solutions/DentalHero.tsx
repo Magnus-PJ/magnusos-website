@@ -25,7 +25,7 @@ export default function DentalHero() {
             <span className="text-sm font-medium text-blue-700">Smart Dental Care</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-normal px-4 py-2">
             <span className="bg-gradient-to-r from-blue-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">
               Digital Dental Suite
             </span>
