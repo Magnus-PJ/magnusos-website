@@ -5,8 +5,8 @@ import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline'
 
 export default function CallToAction() {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-healthcare-900 text-white">
-      <div className="container-padding max-w-7xl mx-auto text-center">
+    <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-healthcare-900 text-white pl-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

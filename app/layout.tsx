@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins } from 'next/font/google'
-import Navigation from '@/components/Navigation'
+import { Inter, Poppins, JetBrains_Mono } from 'next/font/google'
+import LeftSideNavigation from '@/components/LeftSideNavigation'
 import Footer from '@/components/Footer'
 import './globals.css'
 
@@ -12,9 +12,16 @@ const inter = Inter({
 
 const poppins = Poppins({ 
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
   display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({ 
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+  weight: ['400', '500', '600']
 })
 
 export const metadata: Metadata = {
@@ -103,7 +110,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -112,11 +119,11 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0ea5e9" />
       </head>
-      <body className={`${inter.className} antialiased bg-white text-gray-900`}>
-        <Navigation />
-        {children}
-        <Footer />
-      </body>
+                    <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+                <LeftSideNavigation />
+                {children}
+                <Footer />
+              </body>
     </html>
   )
 }

@@ -8,24 +8,24 @@ import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '/' },
   { 
-    name: 'Solutions', 
+    name: 'Tools', 
     href: '#',
     dropdown: [
-      { name: 'Hospital Information System', href: '/solutions/his', description: 'Complete hospital management platform', icon: '🏥' },
-      { name: 'Radiology & Imaging', href: '/solutions/radiology', description: 'AI-powered PACS and imaging workflow', icon: '📷' },
-      { name: 'Laboratory Management', href: '/solutions/laboratory', description: 'Lab workflow and result management', icon: '🧪' },
-      { name: 'Pharmacy & CRM', href: '/solutions/pharmacy-crm', description: 'Pharmacy operations and patient CRM', icon: '💊' },
-      { name: 'ERP & Operations', href: '/solutions/erp', description: 'Enterprise resource planning for healthcare', icon: '⚙️' }
+      { name: 'Hospital Management', href: '/solutions/his', description: 'Complete hospital operations platform', icon: '🏥' },
+      { name: 'Imaging Systems', href: '/solutions/radiology', description: 'AI-powered radiology workflow', icon: '📷' },
+      { name: 'Lab Operations', href: '/solutions/laboratory', description: 'Laboratory management system', icon: '🧪' },
+      { name: 'Pharmacy & CRM', href: '/solutions/pharmacy-crm', description: 'Pharmacy and patient management', icon: '💊' },
+      { name: 'Enterprise ERP', href: '/solutions/erp', description: 'Healthcare resource planning', icon: '⚙️' }
     ]
   },
   { 
     name: 'Specialties', 
     href: '#',
     dropdown: [
-      { name: 'Fertility Clinics', href: '/solutions/fertility', description: 'IVF and fertility management software', icon: '👶' },
-      { name: 'Cosmetology & Aesthetics', href: '/solutions/cosmetology', description: 'Aesthetic clinic management', icon: '✨' },
-      { name: 'Dental Care', href: '/solutions/dental', description: 'Dental practice management system', icon: '🦷' },
-      { name: 'Nuclear Medicine', href: '/solutions/nuclear-medicine', description: 'Nuclear medicine workflow software', icon: '☢️' }
+      { name: 'Fertility Care', href: '/solutions/fertility', description: 'IVF and reproductive medicine', icon: '👶' },
+      { name: 'Aesthetic Medicine', href: '/solutions/cosmetology', description: 'Cosmetic and aesthetic clinics', icon: '✨' },
+      { name: 'Dental Practice', href: '/solutions/dental', description: 'Dental clinic management', icon: '🦷' },
+      { name: 'Nuclear Medicine', href: '/solutions/nuclear-medicine', description: 'Nuclear imaging and therapy', icon: '☢️' }
     ]
   },
   { name: 'About', href: '/about' },
@@ -35,9 +35,9 @@ const navigation = [
     name: 'Company', 
     href: '#',
     dropdown: [
-      { name: 'Careers', href: '/careers', description: 'Join our mission to transform healthcare', icon: '💼' },
-      { name: 'Revenue Model', href: '/revenue-model', description: 'Pricing and subscription options', icon: '💰' },
-      { name: 'Support', href: '/support', description: 'Get help and technical support', icon: '🆘' }
+      { name: 'Careers', href: '/careers', description: 'Join our healthcare mission', icon: '💼' },
+      { name: 'Pricing', href: '/revenue-model', description: 'Flexible pricing options', icon: '💰' },
+      { name: 'Support', href: '/support', description: 'Technical support center', icon: '🆘' }
     ]
   },
   { name: 'Contact', href: '/contact' }
@@ -189,9 +189,9 @@ export default function Navigation() {
           >
             <Link
               href="/contact"
-              className="relative group bg-gradient-to-r from-primary-500 to-healthcare-600 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="relative group bg-gradient-to-r from-primary-500 to-healthcare-600 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden min-w-[120px] text-center"
             >
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10 whitespace-nowrap">Get Started</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-healthcare-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </Link>

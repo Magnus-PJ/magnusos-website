@@ -1,5 +1,4 @@
 import HeroSection from '@/components/HeroSection'
-import PersonaSelector from '@/components/PersonaSelector'
 import MagnusOSHighlights from '@/components/MagnusOSHighlights'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import Footer from '@/components/Footer'
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <HeroSection />
-      <PersonaSelector />
       <PersonaValueProps />
       <PlatformOverview />
       <MagnusOSHighlights />

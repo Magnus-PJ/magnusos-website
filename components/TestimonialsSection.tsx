@@ -45,8 +45,8 @@ const stats = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-padding max-w-7xl mx-auto">
+    <section className="py-20 bg-gray-50 pl-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
           <motion.h2 

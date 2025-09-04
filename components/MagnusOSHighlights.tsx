@@ -43,8 +43,8 @@ const highlights = [
 
 export default function MagnusOSHighlights() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-padding max-w-7xl mx-auto">
+    <section className="py-20 bg-white pl-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
           <motion.h2 

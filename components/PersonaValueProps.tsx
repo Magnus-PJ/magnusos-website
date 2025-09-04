@@ -226,24 +226,24 @@ export default function PersonaValueProps() {
         {/* Selected Persona Content */}
         {selectedPersona && (
           <motion.div
-            className="bg-white rounded-2xl p-8 lg:p-12 shadow-medium border border-gray-100"
+            className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-start justify-between mb-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 rounded-xl bg-primary-100 flex items-center justify-center">
-                  <selectedPersona.icon className="w-8 h-8 text-primary-600" />
+            <div className="flex items-start justify-between mb-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center shadow-lg">
+                  <selectedPersona.icon className="w-10 h-10 text-primary-600" />
                 </div>
-                <div>
-                  <h3 className="heading-3 text-gray-900">{selectedPersona.content.title}</h3>
-                  <p className="body-large text-gray-600 mt-2">{selectedPersona.content.subtitle}</p>
+                <div className="flex-1">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-3">{selectedPersona.content.title}</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">{selectedPersona.content.subtitle}</p>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedPersona(null)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                className="p-3 rounded-xl hover:bg-gray-100 transition-colors duration-200"
               >
                 <XMarkIcon className="w-6 h-6 text-gray-500" />
               </button>
@@ -252,9 +252,11 @@ export default function PersonaValueProps() {
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {selectedPersona.content.features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 rounded-full bg-primary-500 mt-2 flex-shrink-0"></div>
-                  <span className="body-medium text-gray-700">{feature}</span>
+                <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-primary-200 transition-colors duration-200">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary-500 to-healthcare-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-white"></div>
+                  </div>
+                  <span className="text-gray-700 leading-relaxed">{feature}</span>
                 </div>
               ))}
             </div>
