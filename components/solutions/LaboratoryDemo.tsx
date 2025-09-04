@@ -7,7 +7,8 @@ import {
   UserGroupIcon, 
   CogIcon,
   ShieldCheckIcon,
-  ChartBarIcon
+  ChartBarIcon,
+  ClockIcon
 } from '@heroicons/react/24/outline'
 
 const demoFeatures = [

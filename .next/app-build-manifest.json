@@ -1,40 +1,35 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/solutions/pharmacy-crm/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/solutions/pharmacy-crm/page.js"
-    ],
-    "/solutions/erp/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/solutions/erp/page.js"
-    ],
-    "/solutions/cosmetology/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/solutions/cosmetology/page.js"
+      "static/chunks/app/page.js"
     ],
     "/solutions/dental/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/solutions/dental/page.js"
     ],
-    "/_not-found/page": [
+    "/solutions/laboratory/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/solutions/laboratory/page.js"
+    ],
+    "/solutions/fertility/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/fertility/page.js"
+    ],
+    "/solutions/pharmacy-crm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/pharmacy-crm/page.js"
     ]
   }
 }

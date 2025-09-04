@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { PillIcon, ChartBarIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+import { BeakerIcon as PillIcon, ChartBarIcon, CogIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 export default function PharmacyHero() {
   return (

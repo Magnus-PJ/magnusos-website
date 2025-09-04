@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { 
-  PillIcon, 
+  BeakerIcon as PillIcon, 
   DocumentTextIcon, 
   CogIcon, 
   ChartBarIcon, 
