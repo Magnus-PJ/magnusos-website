@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TargetIcon, LightBulbIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { FlagIcon, LightBulbIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
 export default function AboutMission() {
   return (
@@ -30,7 +30,7 @@ export default function AboutMission() {
             className="text-center"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-healthcare-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <TargetIcon className="w-8 h-8 text-white" />
+              <FlagIcon className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Vision</h3>
             <p className="text-gray-600">

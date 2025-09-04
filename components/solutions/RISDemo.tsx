@@ -212,7 +212,7 @@ export default function RISDemo() {
                   <option>IT Director</option>
                   <option>Other</option>
                 </select>
-                <textarea placeholder="Tell us about your current radiology challenges and how we can help..." rows="4" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
+                <textarea placeholder="Tell us about your current radiology challenges and how we can help..." rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
                 <button className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2">
                   <span>Send Message</span>
                   <ArrowRightIcon className="w-5 h-5" />
