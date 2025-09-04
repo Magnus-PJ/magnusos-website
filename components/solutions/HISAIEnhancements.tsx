@@ -8,7 +8,7 @@ import {
   CogIcon,
   UserGroupIcon,
   ShieldCheckIcon,
-  BoltIcon,
+  BoltIcon as LightningBoltIcon,
   EyeIcon
 } from '@heroicons/react/24/outline'
 

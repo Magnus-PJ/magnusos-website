@@ -10,7 +10,7 @@ import {
   ShieldCheckIcon,
   ClockIcon,
   MagnifyingGlassIcon,
-  CameraIcon
+  PhotoIcon as CameraIcon
 } from '@heroicons/react/24/outline'
 
 const features = [
