@@ -47,6 +47,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,30 +57,52 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuOpen && !(event.target as Element).closest('.mobile-menu')) {
+        setMobileMenuOpen(false)
+        setMobileDropdownOpen(null)
+      }
+    }
+    
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = 'unset'
+    }
+  }, [mobileMenuOpen])
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled 
-        ? 'bg-white/90 backdrop-blur-2xl border-b border-gray-200/50 shadow-2xl' 
+        ? 'bg-white/95 backdrop-blur-2xl border-b border-gray-200/50 shadow-2xl' 
         : 'bg-white/10 backdrop-blur-sm border-b border-white/20'
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8 lg:py-5" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 lg:px-8 lg:py-5" aria-label="Global">
         {/* Enhanced Logo - Left Side */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 group">
             <span className="sr-only">MagnusOS.ai</span>
             <motion.div 
-              className="flex items-center space-x-4"
+              className="flex items-center space-x-2 lg:space-x-4"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary-600 via-healthcare-600 to-primary-700 rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 border border-white/20">
-                  <span className="text-white font-bold text-3xl tracking-tight">M</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-3xl"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl"></div>
+                <div className="w-10 h-10 lg:w-14 lg:h-14 bg-gradient-to-br from-primary-600 via-healthcare-600 to-primary-700 rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-xl lg:shadow-2xl group-hover:shadow-2xl lg:group-hover:shadow-3xl transition-all duration-300 border border-white/20">
+                  <span className="text-white font-bold text-xl lg:text-3xl tracking-tight">M</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-2xl lg:rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl lg:rounded-3xl"></div>
                 </div>
                 <motion.div
-                  className="absolute -top-2 -right-2 w-5 h-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-lg"
+                  className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-3 h-3 lg:w-5 lg:h-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-lg"
                   animate={{ 
                     scale: [1, 1.3, 1],
                     rotate: [0, 180, 360],
@@ -87,16 +110,15 @@ export default function Navigation() {
                   }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <SparklesIcon className="w-3 h-3 text-white" />
+                  <SparklesIcon className="w-2 h-2 lg:w-3 lg:h-3 text-white" />
                 </motion.div>
-                
               </div>
               <div className="flex flex-col">
-                            <span className="text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight tracking-tight">
-              MagnusOS
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">.ai</span>
-            </span>
-            <span className="text-xs font-semibold text-primary-600 tracking-widest uppercase bg-gradient-to-r from-primary-50 to-healthcare-50 px-2 py-1 rounded-full">AI-First Healthcare Platform</span>
+                <span className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight tracking-tight">
+                  MagnusOS
+                  <span className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">.ai</span>
+                </span>
+                <span className="hidden sm:block text-xs font-semibold text-primary-600 tracking-widest uppercase bg-gradient-to-r from-primary-50 to-healthcare-50 px-2 py-1 rounded-full">AI-First Healthcare Platform</span>
               </div>
             </motion.div>
           </Link>
@@ -215,109 +237,149 @@ export default function Navigation() {
         <div className="flex lg:hidden">
           <motion.button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 bg-white/80 backdrop-blur-sm"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            aria-label="Open main menu"
           >
-            <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </motion.button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Enhanced Mobile menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="lg:hidden"
+            className="lg:hidden mobile-menu"
           >
-            <div className="fixed inset-0 z-50" />
+            <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm" />
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/95 backdrop-blur-xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-white/98 backdrop-blur-2xl shadow-2xl border-l border-gray-200/50"
             >
-              <div className="flex items-center justify-between">
-                <Link href="/" className="-m-1.5 p-1.5">
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-100">
+                <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                   <span className="sr-only">MagnusOS.ai</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-healthcare-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">M</span>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-healthcare-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-xl">M</span>
                     </div>
-                    <span className="text-xl font-bold text-gray-900">MagnusOS.ai</span>
+                    <div className="flex flex-col">
+                      <span className="text-xl font-bold text-gray-900">MagnusOS.ai</span>
+                      <span className="text-xs text-primary-600 font-medium">AI-First Platform</span>
+                    </div>
                   </div>
                 </Link>
                 <motion.button
                   type="button"
-                  className="-m-2.5 rounded-xl p-2.5 text-gray-700 bg-white/80 backdrop-blur-sm"
+                  className="-m-2.5 rounded-xl p-2.5 text-gray-700 bg-gray-50 hover:bg-gray-100 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  aria-label="Close menu"
                 >
-                  <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </motion.button>
               </div>
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <div key={item.name}>
-                        {item.dropdown ? (
-                          <div>
-                            <div className="text-sm font-semibold leading-6 text-gray-900 mb-2">
-                              {item.name}
-                            </div>
-                            <div className="ml-4 space-y-2">
-                              {item.dropdown.map((dropdownItem) => (
-                                <Link
-                                  key={dropdownItem.name}
-                                  href={dropdownItem.href}
-                                  className="block text-sm leading-6 text-gray-600 hover:text-primary-600 transition-colors p-2 rounded-lg hover:bg-gray-50"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  <div className="flex items-center space-x-2">
-                                    <span className="text-lg">{dropdownItem.icon}</span>
-                                    <span>{dropdownItem.name}</span>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            className="block text-sm font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors p-2 rounded-lg hover:bg-gray-50"
-                            onClick={() => setMobileMenuOpen(false)}
+
+              {/* Mobile Navigation */}
+              <div className="px-6 py-4">
+                <div className="space-y-1">
+                  {navigation.map((item) => (
+                    <div key={item.name} className="border-b border-gray-50 last:border-b-0">
+                      {item.dropdown ? (
+                        <div className="py-3">
+                          <motion.button
+                            onClick={() => setMobileDropdownOpen(mobileDropdownOpen === item.name ? null : item.name)}
+                            className="flex items-center justify-between w-full text-left text-base font-semibold text-gray-900 hover:text-primary-600 transition-colors py-3 px-4 rounded-xl hover:bg-gray-50"
+                            whileTap={{ scale: 0.98 }}
                           >
-                            {item.name}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="py-6 space-y-4">
-                    <Link
-                      href="/demo"
-                      className="block text-sm font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors p-2 rounded-lg hover:bg-gray-50"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Demo
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="btn-primary w-full text-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Get Started
-                    </Link>
-                  </div>
+                            <span>{item.name}</span>
+                            <ChevronDownIcon 
+                              className={`h-5 w-5 transition-transform duration-200 ${
+                                mobileDropdownOpen === item.name ? 'rotate-180' : ''
+                              }`} 
+                            />
+                          </motion.button>
+                          
+                          <AnimatePresence>
+                            {mobileDropdownOpen === item.name && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="ml-4 mt-2 space-y-2 pb-3">
+                                  {item.dropdown.map((dropdownItem, index) => (
+                                    <motion.div
+                                      key={dropdownItem.name}
+                                      initial={{ opacity: 0, x: 20 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      transition={{ delay: index * 0.05 }}
+                                    >
+                                      <Link
+                                        href={dropdownItem.href}
+                                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-primary-50 transition-all duration-200 group"
+                                        onClick={() => {
+                                          setMobileMenuOpen(false)
+                                          setMobileDropdownOpen(null)
+                                        }}
+                                      >
+                                        <span className="text-2xl group-hover:scale-110 transition-transform">{dropdownItem.icon}</span>
+                                        <div className="flex-1">
+                                          <div className="font-medium text-gray-900 group-hover:text-primary-700 text-sm">
+                                            {dropdownItem.name}
+                                          </div>
+                                          <p className="text-xs text-gray-600 mt-1 leading-relaxed">{dropdownItem.description}</p>
+                                        </div>
+                                      </Link>
+                                    </motion.div>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="block text-base font-semibold text-gray-900 hover:text-primary-600 transition-colors py-3 px-4 rounded-xl hover:bg-gray-50"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Mobile CTA Section */}
+                <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
+                  <Link
+                    href="/demo"
+                    className="block w-full text-center text-base font-semibold text-primary-600 hover:text-primary-700 transition-colors py-3 px-4 rounded-xl border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    View Demo
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="block w-full text-center text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-healthcare-700 hover:from-primary-700 hover:to-healthcare-800 transition-all duration-200 py-4 px-6 rounded-xl shadow-lg hover:shadow-xl"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
                 </div>
               </div>
             </motion.div>
