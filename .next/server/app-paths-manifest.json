@@ -1,4 +1,5 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/revenue-model/page": "app/revenue-model/page.js",
   "/solutions/radiology/page": "app/solutions/radiology/page.js",
   "/solutions/fertility/page": "app/solutions/fertility/page.js",
