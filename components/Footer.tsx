@@ -56,17 +56,17 @@ export default function Footer() {
       <div className="container-padding max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-2 lg:col-span-2"
+              className="md:col-span-2 lg:col-span-1"
             >
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-teal-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">M</span>
                 </div>
                 <span className="text-2xl font-bold">MagnusOS.ai</span>
@@ -78,15 +78,15 @@ export default function Footer() {
               {/* Contact Info */}
               <div className="space-y-2">
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <EnvelopeIcon className="w-4 h-4 text-blue-400" />
+                  <EnvelopeIcon className="w-4 h-4 text-purple-400" />
                   <span className="text-sm">contact@magnusos.ai</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <PhoneIcon className="w-4 h-4 text-blue-400" />
+                  <PhoneIcon className="w-4 h-4 text-purple-400" />
                   <span className="text-sm">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPinIcon className="w-4 h-4 text-blue-400" />
+                  <MapPinIcon className="w-4 h-4 text-purple-400" />
                   <span className="text-sm">Kerala, India | Dubai, UAE</span>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -127,7 +127,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -149,7 +149,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -171,7 +171,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -199,9 +199,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap">
                 Subscribe
               </button>
             </div>
@@ -230,7 +230,7 @@ export default function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
                     aria-label={social.name}
                   >
                     {social.icon}
