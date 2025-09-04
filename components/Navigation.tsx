@@ -57,39 +57,52 @@ export default function Navigation() {
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled 
-        ? 'bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-2xl' 
-        : 'bg-transparent'
+        ? 'bg-white/90 backdrop-blur-2xl border-b border-gray-200/50 shadow-2xl' 
+        : 'bg-white/10 backdrop-blur-sm border-b border-white/20'
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        {/* Logo - Left Side */}
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8 lg:py-5" aria-label="Global">
+        {/* Enhanced Logo - Left Side */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 group">
             <span className="sr-only">MagnusOS.ai</span>
             <motion.div 
-              className="flex items-center space-x-3"
-              whileHover={{ scale: 1.05 }}
+              className="flex items-center space-x-4"
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 via-healthcare-500 to-primary-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <span className="text-white font-bold text-2xl">M</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-2xl"></div>
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-600 via-healthcare-600 to-primary-700 rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 border border-white/20">
+                  <span className="text-white font-bold text-3xl tracking-tight">M</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl"></div>
                 </div>
                 <motion.div
-                  className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -top-2 -right-2 w-5 h-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-lg"
+                  animate={{ 
+                    scale: [1, 1.3, 1],
+                    rotate: [0, 180, 360],
+                    y: [0, -2, 0]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <SparklesIcon className="w-3 h-3 text-white" />
                 </motion.div>
+                <motion.div
+                  className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-md"
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    opacity: [0.7, 1, 0.7]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                <span className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight">
                   MagnusOS.ai
                 </span>
-                <span className="text-xs text-primary-600 font-medium tracking-wider">AI-FIRST HEALTHCARE</span>
+                <span className="text-xs font-semibold text-primary-600 tracking-widest uppercase">AI-First Healthcare Platform</span>
               </div>
             </motion.div>
           </Link>
@@ -123,8 +136,8 @@ export default function Navigation() {
                         transition={{ duration: 0.2, ease: "easeOut" }}
                         className="absolute right-0 z-10 mt-3 w-80"
                       >
-                        <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
-                          <div className="p-2">
+                        <div className="bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
+                          <div className="p-3">
                             {item.dropdown.map((dropdownItem, index) => (
                               <motion.div
                                 key={dropdownItem.name}
@@ -135,14 +148,14 @@ export default function Navigation() {
                               >
                                 <Link 
                                   href={dropdownItem.href}
-                                  className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary-50 hover:to-healthcare-50 transition-all duration-200"
+                                  className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-primary-50 hover:to-healthcare-50 transition-all duration-300 border border-transparent hover:border-primary-200/50"
                                 >
-                                  <span className="text-2xl">{dropdownItem.icon}</span>
+                                  <span className="text-3xl filter drop-shadow-sm">{dropdownItem.icon}</span>
                                   <div className="flex-1">
-                                    <div className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                                    <div className="font-semibold text-gray-900 group-hover:text-primary-700 transition-colors text-base">
                                       {dropdownItem.name}
                                     </div>
-                                    <p className="text-sm text-gray-600 mt-1">{dropdownItem.description}</p>
+                                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">{dropdownItem.description}</p>
                                   </div>
                                 </Link>
                               </motion.div>
@@ -189,11 +202,17 @@ export default function Navigation() {
           >
             <Link
               href="/contact"
-              className="relative group bg-gradient-to-r from-primary-500 to-healthcare-600 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden min-w-[120px] text-center"
+              className="relative group bg-gradient-to-r from-primary-600 to-healthcare-700 text-white px-8 py-4 rounded-2xl font-semibold text-sm shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden min-w-[140px] text-center border border-white/20"
             >
               <span className="relative z-10 whitespace-nowrap">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-healthcare-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-700 to-healthcare-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.6 }}
+              />
             </Link>
           </motion.div>
         </div>

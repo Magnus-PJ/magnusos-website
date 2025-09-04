@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins, JetBrains_Mono } from 'next/font/google'
-import LeftSideNavigation from '@/components/LeftSideNavigation'
+import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import './globals.css'
 
@@ -120,7 +120,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0ea5e9" />
       </head>
                     <body className={`${inter.className} antialiased bg-white text-gray-900`}>
-                <LeftSideNavigation />
+                <Navigation />
                 {children}
                 <Footer />
               </body>
