@@ -90,31 +90,6 @@ export default function Navigation() {
                   <SparklesIcon className="w-3 h-3 text-white" />
                 </motion.div>
                 
-                {/* Additional AI Circuit Elements */}
-                <motion.div
-                  className="absolute top-1 right-1 w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                  animate={{ 
-                    scale: [1, 1.5, 1],
-                    opacity: [0.6, 1, 0.6]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                />
-                <motion.div
-                  className="absolute bottom-1 left-1 w-1.5 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
-                  animate={{ 
-                    scale: [1, 1.3, 1],
-                    opacity: [0.5, 1, 0.5]
-                  }}
-                  transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
-                />
-                <motion.div
-                  className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-md"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.7, 1, 0.7]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                />
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-tight">
@@ -151,7 +126,7 @@ export default function Navigation() {
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        transition={{ duration: 0.1, ease: "easeOut" }}
                         className="absolute right-0 z-10 mt-3 w-80"
                       >
                         <div className="bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-gray-200/50 overflow-hidden">
@@ -161,7 +136,7 @@ export default function Navigation() {
                                 key={dropdownItem.name}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: index * 0.05 }}
+                                transition={{ delay: index * 0.02 }}
                                 className="group"
                               >
                                 <Link 

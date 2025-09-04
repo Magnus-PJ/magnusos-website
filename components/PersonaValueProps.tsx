@@ -239,26 +239,6 @@ export default function PersonaValueProps() {
                       <persona.icon className="w-10 h-10" />
                     </div>
                     
-                    {/* Floating AI Elements */}
-                    <motion.div
-                      className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg"
-                      animate={{ 
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 180, 360]
-                      }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </motion.div>
-                    
-                    <motion.div
-                      className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full shadow-md"
-                      animate={{ 
-                        scale: [1, 1.3, 1],
-                        opacity: [0.7, 1, 0.7]
-                      }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    />
                   </div>
                   
                   {/* Enhanced Text Content */}
@@ -342,26 +322,6 @@ export default function PersonaValueProps() {
                         <persona.icon className="w-10 h-10" />
                       </div>
                       
-                      {/* Floating AI Elements */}
-                      <motion.div
-                        className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg"
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          rotate: [0, 180, 360]
-                        }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </motion.div>
-                      
-                      <motion.div
-                        className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full shadow-md"
-                        animate={{ 
-                          scale: [1, 1.3, 1],
-                          opacity: [0.7, 1, 0.7]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                      />
                     </div>
                     
                     {/* Enhanced Text Content */}

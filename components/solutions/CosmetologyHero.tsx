@@ -71,14 +71,6 @@ export default function CosmetologyHero() {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
             <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <CameraIcon className="w-8 h-8 text-white" />
-              <motion.div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Skin Analysis</h3>
             <p className="text-gray-600">Quantify wrinkles, detect hyperpigmentation, and track improvements with AI-powered analysis</p>
@@ -91,14 +83,6 @@ export default function CosmetologyHero() {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
             <div className="relative w-16 h-16 bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <SparklesIcon className="w-8 h-8 text-white" />
-              <motion.div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
-                animate={{ 
-                  scale: [1, 1.3, 1],
-                  rotate: [0, 180, 360]
-                }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AR Treatment Planning</h3>
             <p className="text-gray-600">Show clients realistic previews of results using advanced AR visualization tools</p>
@@ -111,14 +95,6 @@ export default function CosmetologyHero() {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100 group hover:shadow-xl transition-all duration-300">
             <div className="relative w-16 h-16 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-105 transition-transform duration-300">
               <HeartIcon className="w-8 h-8 text-white" />
-              <motion.div
-                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.6, 1, 0.6]
-                }}
-                transition={{ duration: 2.5, repeat: Infinity }}
-              />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Client Experience</h3>
             <p className="text-gray-600">Build trust through transparency with before/after photos and personalized care</p>
