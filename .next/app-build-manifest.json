@@ -16,10 +16,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/solutions/laboratory/page.js"
     ],
-    "/_not-found/page": [
+    "/solutions/radiology/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/solutions/radiology/page.js"
+    ],
+    "/solutions/his/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/his/page.js"
+    ],
+    "/solutions/fertility/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/fertility/page.js"
+    ],
+    "/solutions/pharmacy-crm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/solutions/pharmacy-crm/page.js"
     ]
   }
 }
