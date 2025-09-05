@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import PersonaValueProps from '@/components/PersonaValueProps'
 import PlatformOverview from '@/components/PlatformOverview'
 import CallToAction from '@/components/CallToAction'
+import HealthcareFAQ from '@/components/HealthcareFAQ'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <PlatformOverview />
       <MagnusOSHighlights />
       <TestimonialsSection />
+      <HealthcareFAQ />
       <CallToAction />
     </main>
   )
