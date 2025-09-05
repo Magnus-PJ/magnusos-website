@@ -1225,6 +1225,870 @@
     @apply focus:scale-102 transition-all duration-200;
   }
 
+  /* ===== ADVANCED MOBILE-FIRST ENHANCEMENTS ===== */
+
+  /* Advanced Mobile Layouts */
+  .mobile-stack {
+    @apply flex flex-col space-y-4 sm:space-y-6;
+  }
+
+  .mobile-stack-tight {
+    @apply flex flex-col space-y-2 sm:space-y-3;
+  }
+
+  .mobile-stack-loose {
+    @apply flex flex-col space-y-6 sm:space-y-8;
+  }
+
+  .mobile-grid-2 {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+  }
+
+  .mobile-grid-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6;
+  }
+
+  .mobile-grid-auto {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+
+  /* Mobile-First Card System */
+  .mobile-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-6;
+    @apply hover:shadow-md transition-all duration-300;
+  }
+
+  .mobile-card-compact {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-3 sm:p-4;
+    @apply hover:shadow-md transition-all duration-300;
+  }
+
+  .mobile-card-spacious {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 sm:p-8;
+    @apply hover:shadow-md transition-all duration-300;
+  }
+
+  .mobile-card-interactive {
+    @apply mobile-card cursor-pointer hover:scale-105 hover:shadow-lg;
+    @apply active:scale-95 transition-all duration-200;
+  }
+
+  /* Mobile-First Typography */
+  .mobile-text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  .mobile-heading-responsive {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .mobile-title-responsive {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .mobile-display-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  /* Mobile-First Spacing */
+  .mobile-padding {
+    @apply px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8;
+  }
+
+  .mobile-padding-compact {
+    @apply px-3 py-3 sm:px-4 sm:py-4 md:px-6 md:py-6;
+  }
+
+  .mobile-padding-spacious {
+    @apply px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-12;
+  }
+
+  .mobile-margin {
+    @apply mx-4 my-4 sm:mx-6 sm:my-6 md:mx-8 md:my-8;
+  }
+
+  .mobile-margin-compact {
+    @apply mx-3 my-3 sm:mx-4 sm:my-4 md:mx-6 md:my-6;
+  }
+
+  .mobile-margin-spacious {
+    @apply mx-6 my-6 sm:mx-8 sm:my-8 md:mx-12 md:my-12;
+  }
+
+  /* Mobile-First Container System */
+  .mobile-container {
+    @apply w-full max-w-sm mx-auto px-4 sm:max-w-md sm:px-6 md:max-w-2xl md:px-8 lg:max-w-4xl lg:px-12 xl:max-w-6xl;
+  }
+
+  .mobile-container-wide {
+    @apply w-full max-w-md mx-auto px-4 sm:max-w-lg sm:px-6 md:max-w-3xl md:px-8 lg:max-w-5xl lg:px-12 xl:max-w-7xl;
+  }
+
+  .mobile-container-narrow {
+    @apply w-full max-w-xs mx-auto px-4 sm:max-w-sm sm:px-6 md:max-w-xl md:px-8 lg:max-w-2xl lg:px-12;
+  }
+
+  /* Mobile-First Button System */
+  .mobile-btn {
+    @apply w-full sm:w-auto px-6 py-3 text-sm sm:text-base font-medium rounded-lg;
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .mobile-btn-compact {
+    @apply w-full sm:w-auto px-4 py-2 text-sm font-medium rounded-lg;
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .mobile-btn-spacious {
+    @apply w-full sm:w-auto px-8 py-4 text-base sm:text-lg font-medium rounded-lg;
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .mobile-btn-primary {
+    @apply mobile-btn bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .mobile-btn-secondary {
+    @apply mobile-btn bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  .mobile-btn-outline {
+    @apply mobile-btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  /* Mobile-First Form Elements */
+  .mobile-input {
+    @apply w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg;
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+
+  .mobile-textarea {
+    @apply w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg resize-none;
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+
+  .mobile-select {
+    @apply w-full px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg bg-white;
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+  }
+
+  .mobile-label {
+    @apply block text-sm sm:text-base font-medium text-gray-700 mb-2;
+  }
+
+  /* Mobile-First Navigation Enhancements */
+  .mobile-nav-item {
+    @apply block w-full px-4 py-3 text-sm sm:text-base font-medium text-gray-700;
+    @apply hover:bg-gray-100 hover:text-gray-900 transition-all duration-200;
+    @apply active:bg-gray-200 active:scale-95;
+  }
+
+  .mobile-nav-item-active {
+    @apply mobile-nav-item bg-blue-50 text-blue-700 border-r-4 border-blue-700;
+  }
+
+  .mobile-nav-dropdown {
+    @apply absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg;
+    @apply transform transition-all duration-200 ease-in-out;
+  }
+
+  .mobile-nav-dropdown-open {
+    @apply mobile-nav-dropdown translate-y-0 opacity-100;
+  }
+
+  .mobile-nav-dropdown-closed {
+    @apply mobile-nav-dropdown -translate-y-2 opacity-0 pointer-events-none;
+  }
+
+  /* Mobile-First Modal System */
+  .mobile-modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end sm:items-center justify-center;
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .mobile-modal-content {
+    @apply bg-white rounded-t-lg sm:rounded-lg shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg;
+    @apply transform transition-all duration-300 ease-in-out;
+  }
+
+  .mobile-modal-content-open {
+    @apply mobile-modal-content translate-y-0 opacity-100;
+  }
+
+  .mobile-modal-content-closed {
+    @apply mobile-modal-content translate-y-full sm:translate-y-4 opacity-0;
+  }
+
+  /* Mobile-First List System */
+  .mobile-list {
+    @apply space-y-2 sm:space-y-3;
+  }
+
+  .mobile-list-item {
+    @apply flex items-center justify-between p-3 sm:p-4 bg-white rounded-lg border border-gray-100;
+    @apply hover:bg-gray-50 transition-all duration-200;
+  }
+
+  .mobile-list-item-compact {
+    @apply flex items-center justify-between p-2 sm:p-3 bg-white rounded-lg border border-gray-100;
+    @apply hover:bg-gray-50 transition-all duration-200;
+  }
+
+  .mobile-list-item-spacious {
+    @apply flex items-center justify-between p-4 sm:p-6 bg-white rounded-lg border border-gray-100;
+    @apply hover:bg-gray-50 transition-all duration-200;
+  }
+
+  /* Mobile-First Tab System */
+  .mobile-tabs {
+    @apply flex space-x-1 bg-gray-100 rounded-lg p-1;
+  }
+
+  .mobile-tab {
+    @apply flex-1 px-3 py-2 text-sm sm:text-base font-medium text-center rounded-md;
+    @apply transition-all duration-200 active:scale-95;
+  }
+
+  .mobile-tab-active {
+    @apply mobile-tab bg-white text-blue-600 shadow-sm;
+  }
+
+  .mobile-tab-inactive {
+    @apply mobile-tab text-gray-600 hover:text-gray-900;
+  }
+
+  /* Mobile-First Accordion System */
+  .mobile-accordion {
+    @apply border border-gray-200 rounded-lg overflow-hidden;
+  }
+
+  .mobile-accordion-item {
+    @apply border-b border-gray-200 last:border-b-0;
+  }
+
+  .mobile-accordion-trigger {
+    @apply w-full px-4 py-3 text-left text-sm sm:text-base font-medium text-gray-900;
+    @apply hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply transition-all duration-200 active:bg-gray-100;
+  }
+
+  .mobile-accordion-content {
+    @apply px-4 py-3 text-sm sm:text-base text-gray-600 bg-gray-50;
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .mobile-accordion-content-open {
+    @apply mobile-accordion-content max-h-96 opacity-100;
+  }
+
+  .mobile-accordion-content-closed {
+    @apply mobile-accordion-content max-h-0 opacity-0 overflow-hidden;
+  }
+
+  /* Advanced Mobile Interaction Patterns */
+  .mobile-swipe-container {
+    @apply relative overflow-hidden touch-pan-x;
+  }
+
+  .mobile-swipe-content {
+    @apply flex transition-transform duration-300 ease-out;
+  }
+
+  .mobile-swipe-item {
+    @apply flex-shrink-0 w-full;
+  }
+
+  .mobile-swipe-indicator {
+    @apply flex justify-center space-x-2 mt-4;
+  }
+
+  .mobile-swipe-dot {
+    @apply w-2 h-2 rounded-full bg-gray-300 transition-all duration-200;
+  }
+
+  .mobile-swipe-dot-active {
+    @apply mobile-swipe-dot bg-blue-600 w-6;
+  }
+
+  /* Mobile Pull-to-Refresh */
+  .mobile-pull-refresh {
+    @apply relative overflow-hidden;
+  }
+
+  .mobile-pull-refresh-indicator {
+    @apply absolute top-0 left-0 right-0 flex items-center justify-center py-4;
+    @apply transform -translate-y-full transition-transform duration-300;
+  }
+
+  .mobile-pull-refresh-indicator-active {
+    @apply mobile-pull-refresh-indicator translate-y-0;
+  }
+
+  .mobile-pull-refresh-spinner {
+    @apply w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin;
+  }
+
+  /* Mobile Gesture Feedback */
+  .mobile-gesture-feedback {
+    @apply relative overflow-hidden;
+  }
+
+  .mobile-gesture-ripple {
+    @apply absolute inset-0 pointer-events-none;
+  }
+
+  .mobile-gesture-ripple-effect {
+    @apply absolute w-4 h-4 bg-blue-600 rounded-full opacity-30;
+    @apply animate-ping;
+  }
+
+  /* Mobile Haptic Feedback Simulation */
+  .mobile-haptic-light {
+    @apply active:scale-95 transition-transform duration-100;
+  }
+
+  .mobile-haptic-medium {
+    @apply active:scale-90 transition-transform duration-150;
+  }
+
+  .mobile-haptic-heavy {
+    @apply active:scale-85 transition-transform duration-200;
+  }
+
+  /* Mobile Loading States */
+  .mobile-loading-skeleton {
+    @apply animate-pulse bg-gray-200 rounded;
+  }
+
+  .mobile-loading-skeleton-text {
+    @apply mobile-loading-skeleton h-4 w-full;
+  }
+
+  .mobile-loading-skeleton-title {
+    @apply mobile-loading-skeleton h-6 w-3/4;
+  }
+
+  .mobile-loading-skeleton-avatar {
+    @apply mobile-loading-skeleton h-12 w-12 rounded-full;
+  }
+
+  .mobile-loading-skeleton-card {
+    @apply mobile-loading-skeleton h-32 w-full rounded-lg;
+  }
+
+  /* Mobile Error States */
+  .mobile-error-state {
+    @apply flex flex-col items-center justify-center p-8 text-center;
+  }
+
+  .mobile-error-icon {
+    @apply w-16 h-16 text-red-500 mb-4;
+  }
+
+  .mobile-error-title {
+    @apply text-lg font-semibold text-gray-900 mb-2;
+  }
+
+  .mobile-error-message {
+    @apply text-sm text-gray-600 mb-4;
+  }
+
+  .mobile-error-action {
+    @apply mobile-btn-primary;
+  }
+
+  /* Mobile Empty States */
+  .mobile-empty-state {
+    @apply flex flex-col items-center justify-center p-8 text-center;
+  }
+
+  .mobile-empty-icon {
+    @apply w-16 h-16 text-gray-400 mb-4;
+  }
+
+  .mobile-empty-title {
+    @apply text-lg font-semibold text-gray-900 mb-2;
+  }
+
+  .mobile-empty-message {
+    @apply text-sm text-gray-600 mb-4;
+  }
+
+  .mobile-empty-action {
+    @apply mobile-btn-primary;
+  }
+
+  /* Mobile Success States */
+  .mobile-success-state {
+    @apply flex flex-col items-center justify-center p-8 text-center;
+  }
+
+  .mobile-success-icon {
+    @apply w-16 h-16 text-green-500 mb-4;
+  }
+
+  .mobile-success-title {
+    @apply text-lg font-semibold text-gray-900 mb-2;
+  }
+
+  .mobile-success-message {
+    @apply text-sm text-gray-600 mb-4;
+  }
+
+  .mobile-success-action {
+    @apply mobile-btn-primary;
+  }
+
+  /* Mobile Floating Action Button */
+  .mobile-fab {
+    @apply fixed bottom-6 right-6 w-14 h-14 bg-blue-600 text-white rounded-full shadow-lg;
+    @apply flex items-center justify-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply transition-all duration-200 active:scale-95 z-40;
+  }
+
+  .mobile-fab-secondary {
+    @apply mobile-fab bg-gray-600 hover:bg-gray-700 focus:ring-gray-500;
+  }
+
+  .mobile-fab-success {
+    @apply mobile-fab bg-green-600 hover:bg-green-700 focus:ring-green-500;
+  }
+
+  .mobile-fab-danger {
+    @apply mobile-fab bg-red-600 hover:bg-red-700 focus:ring-red-500;
+  }
+
+  /* Mobile Bottom Sheet */
+  .mobile-bottom-sheet {
+    @apply fixed bottom-0 left-0 right-0 bg-white rounded-t-lg shadow-xl z-50;
+    @apply transform transition-transform duration-300 ease-in-out;
+  }
+
+  .mobile-bottom-sheet-open {
+    @apply mobile-bottom-sheet translate-y-0;
+  }
+
+  .mobile-bottom-sheet-closed {
+    @apply mobile-bottom-sheet translate-y-full;
+  }
+
+  .mobile-bottom-sheet-handle {
+    @apply w-12 h-1 bg-gray-300 rounded-full mx-auto mt-3 mb-4;
+  }
+
+  .mobile-bottom-sheet-content {
+    @apply px-4 pb-6 max-h-96 overflow-y-auto;
+  }
+
+  /* Mobile Toast Notifications */
+  .mobile-toast {
+    @apply fixed top-4 left-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg z-50;
+    @apply transform transition-all duration-300 ease-in-out;
+  }
+
+  .mobile-toast-show {
+    @apply mobile-toast translate-y-0 opacity-100;
+  }
+
+  .mobile-toast-hide {
+    @apply mobile-toast -translate-y-2 opacity-0;
+  }
+
+  .mobile-toast-success {
+    @apply mobile-toast border-l-4 border-green-500;
+  }
+
+  .mobile-toast-error {
+    @apply mobile-toast border-l-4 border-red-500;
+  }
+
+  .mobile-toast-warning {
+    @apply mobile-toast border-l-4 border-yellow-500;
+  }
+
+  .mobile-toast-info {
+    @apply mobile-toast border-l-4 border-blue-500;
+  }
+
+  .mobile-toast-content {
+    @apply flex items-start p-4;
+  }
+
+  .mobile-toast-icon {
+    @apply w-5 h-5 mr-3 mt-0.5;
+  }
+
+  .mobile-toast-message {
+    @apply flex-1 text-sm text-gray-900;
+  }
+
+  .mobile-toast-close {
+    @apply ml-3 text-gray-400 hover:text-gray-600;
+  }
+
+  /* Mobile Search Interface */
+  .mobile-search-container {
+    @apply relative;
+  }
+
+  .mobile-search-input {
+    @apply mobile-input pl-10 pr-4;
+  }
+
+  .mobile-search-icon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400;
+  }
+
+  .mobile-search-results {
+    @apply absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-lg mt-1 z-40;
+  }
+
+  .mobile-search-result {
+    @apply px-4 py-3 text-sm text-gray-900 hover:bg-gray-50 cursor-pointer;
+  }
+
+  .mobile-search-result-highlight {
+    @apply font-semibold text-blue-600;
+  }
+
+  /* Mobile Filter Interface */
+  .mobile-filter-container {
+    @apply bg-white border-b border-gray-200;
+  }
+
+  .mobile-filter-tabs {
+    @apply flex overflow-x-auto space-x-1 p-4;
+  }
+
+  .mobile-filter-tab {
+    @apply flex-shrink-0 px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full;
+    @apply hover:text-gray-900 hover:bg-gray-200 transition-all duration-200;
+  }
+
+  .mobile-filter-tab-active {
+    @apply mobile-filter-tab text-blue-600 bg-blue-100;
+  }
+
+  .mobile-filter-content {
+    @apply p-4;
+  }
+
+  .mobile-filter-option {
+    @apply flex items-center justify-between py-3 border-b border-gray-100 last:border-b-0;
+  }
+
+  .mobile-filter-option-label {
+    @apply text-sm text-gray-900;
+  }
+
+  .mobile-filter-option-checkbox {
+    @apply w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+  }
+
+  /* Mobile Performance Optimizations */
+  .mobile-optimized-image {
+    @apply w-full h-auto object-cover;
+    @apply transition-opacity duration-300;
+  }
+
+  .mobile-optimized-image-loading {
+    @apply mobile-optimized-image opacity-0;
+  }
+
+  .mobile-optimized-image-loaded {
+    @apply mobile-optimized-image opacity-100;
+  }
+
+  .mobile-lazy-load {
+    @apply transition-opacity duration-300;
+  }
+
+  .mobile-lazy-load-loading {
+    @apply mobile-lazy-load opacity-0;
+  }
+
+  .mobile-lazy-load-loaded {
+    @apply mobile-lazy-load opacity-100;
+  }
+
+  /* Mobile Accessibility Enhancements */
+  .mobile-sr-only {
+    @apply sr-only;
+  }
+
+  .mobile-focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .mobile-focus-visible-inset {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset;
+  }
+
+  .mobile-skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4;
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg z-50;
+  }
+
+  .mobile-aria-live {
+    @apply sr-only;
+  }
+
+  .mobile-aria-live-assertive {
+    @apply mobile-aria-live;
+  }
+
+  .mobile-aria-live-polite {
+    @apply mobile-aria-live;
+  }
+
+  /* Mobile High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .mobile-high-contrast {
+      @apply border-2 border-black;
+    }
+    
+    .mobile-high-contrast-focus {
+      @apply focus:ring-4 focus:ring-black focus:ring-offset-4;
+    }
+    
+    .mobile-high-contrast-text {
+      @apply text-black;
+    }
+    
+    .mobile-high-contrast-bg {
+      @apply bg-white;
+    }
+  }
+
+  /* Mobile Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-reduce-motion {
+      @apply transition-none;
+    }
+    
+    .mobile-reduce-motion * {
+      @apply transition-none;
+    }
+    
+    .mobile-reduce-motion-animation {
+      @apply animate-none;
+    }
+  }
+
+  /* Mobile Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .mobile-dark-mode {
+      @apply bg-gray-900 text-white;
+    }
+    
+    .mobile-dark-mode-card {
+      @apply bg-gray-800 border-gray-700;
+    }
+    
+    .mobile-dark-mode-input {
+      @apply bg-gray-800 border-gray-600 text-white;
+    }
+    
+    .mobile-dark-mode-button {
+      @apply bg-gray-700 text-white hover:bg-gray-600;
+    }
+  }
+
+  /* Mobile Touch Target Optimization */
+  .mobile-touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .mobile-touch-target-large {
+    @apply min-h-[48px] min-w-[48px];
+  }
+
+  .mobile-touch-target-small {
+    @apply min-h-[40px] min-w-[40px];
+  }
+
+  /* Mobile Gesture Recognition */
+  .mobile-gesture-pan {
+    @apply touch-pan-x touch-pan-y;
+  }
+
+  .mobile-gesture-pinch {
+    @apply touch-pinch-zoom;
+  }
+
+  .mobile-gesture-rotate {
+    @apply touch-rotate;
+  }
+
+  .mobile-gesture-manipulation {
+    @apply touch-manipulation;
+  }
+
+  /* Mobile Scroll Behavior */
+  .mobile-scroll-smooth {
+    @apply scroll-smooth;
+  }
+
+  .mobile-scroll-auto {
+    @apply scroll-auto;
+  }
+
+  .mobile-scroll-hidden {
+    @apply overflow-hidden;
+  }
+
+  .mobile-scroll-x {
+    @apply overflow-x-auto;
+  }
+
+  .mobile-scroll-y {
+    @apply overflow-y-auto;
+  }
+
+  /* Mobile Safe Area Support */
+  .mobile-safe-area-top {
+    @apply pt-safe-top;
+  }
+
+  .mobile-safe-area-bottom {
+    @apply pb-safe-bottom;
+  }
+
+  .mobile-safe-area-left {
+    @apply pl-safe-left;
+  }
+
+  .mobile-safe-area-right {
+    @apply pr-safe-right;
+  }
+
+  .mobile-safe-area-all {
+    @apply mobile-safe-area-top mobile-safe-area-bottom mobile-safe-area-left mobile-safe-area-right;
+  }
+
+  /* Mobile Viewport Units */
+  .mobile-vh-100 {
+    @apply h-screen;
+  }
+
+  .mobile-vw-100 {
+    @apply w-screen;
+  }
+
+  .mobile-vmin-100 {
+    @apply min-h-screen min-w-screen;
+  }
+
+  .mobile-vmax-100 {
+    @apply max-h-screen max-w-screen;
+  }
+
+  /* Mobile Orientation Support */
+  @media (orientation: portrait) {
+    .mobile-portrait-only {
+      @apply block;
+    }
+    
+    .mobile-landscape-only {
+      @apply hidden;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .mobile-portrait-only {
+      @apply hidden;
+    }
+    
+    .mobile-landscape-only {
+      @apply block;
+    }
+  }
+
+  /* Mobile Device Specific */
+  @media (max-width: 480px) {
+    .mobile-xs-only {
+      @apply block;
+    }
+    
+    .mobile-sm-up {
+      @apply hidden;
+    }
+  }
+
+  @media (min-width: 481px) {
+    .mobile-xs-only {
+      @apply hidden;
+    }
+    
+    .mobile-sm-up {
+      @apply block;
+    }
+  }
+
+  /* Mobile Performance Classes */
+  .mobile-gpu-accelerated {
+    @apply transform-gpu;
+  }
+
+  .mobile-will-change-transform {
+    @apply will-change-transform;
+  }
+
+  .mobile-will-change-scroll {
+    @apply will-change-scroll-position;
+  }
+
+  .mobile-will-change-contents {
+    @apply will-change-contents;
+  }
+
+  .mobile-will-change-auto {
+    @apply will-change-auto;
+  }
+
+  /* Mobile Backdrop Support */
+  .mobile-backdrop-blur {
+    @apply backdrop-blur-sm;
+  }
+
+  .mobile-backdrop-blur-md {
+    @apply backdrop-blur-md;
+  }
+
+  .mobile-backdrop-blur-lg {
+    @apply backdrop-blur-lg;
+  }
+
+  .mobile-backdrop-blur-xl {
+    @apply backdrop-blur-xl;
+  }
+
+  /* Mobile Glass Effect */
+  .mobile-glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .mobile-glass-dark {
+    @apply bg-gray-900/80 backdrop-blur-md border border-gray-700/20;
+  }
+
+  /* Mobile Gradient Overlays */
+  .mobile-gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-transparent to-black/50;
+  }
+
+  .mobile-gradient-overlay-top {
+    @apply absolute inset-0 bg-gradient-to-t from-transparent to-black/50;
+  }
+
+  .mobile-gradient-overlay-left {
+    @apply absolute inset-0 bg-gradient-to-r from-transparent to-black/50;
+  }
+
+  .mobile-gradient-overlay-right {
+    @apply absolute inset-0 bg-gradient-to-l from-transparent to-black/50;
+  }
+
   /* Healthcare-specific styles */
   .healthcare-icon {
     @apply w-6 h-6 text-indigo-600;
