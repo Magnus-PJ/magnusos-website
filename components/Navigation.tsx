@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Bars3Icon, XMarkIcon, ChevronDownIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ChevronDownIcon, SparklesIcon, ArrowUpIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 const navigation = [
@@ -48,14 +48,30 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const [navHidden, setNavHidden] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+      const currentScrollY = window.scrollY
+      
+      // Show/hide navigation based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide nav
+        setNavHidden(true)
+      } else {
+        // Scrolling up - show nav
+        setNavHidden(false)
+      }
+      
+      // Set scrolled state for styling
+      setScrolled(currentScrollY > 20)
+      setLastScrollY(currentScrollY)
     }
-    window.addEventListener('scroll', handleScroll)
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -79,11 +95,23 @@ export default function Navigation() {
     }
   }, [mobileMenuOpen])
 
+  // Close mobile menu when scrolling
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false)
+      setMobileDropdownOpen(null)
+    }
+  }, [scrolled])
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+      navHidden 
+        ? '-translate-y-full opacity-0' 
+        : 'translate-y-0 opacity-100'
+    } ${
       scrolled 
-        ? 'bg-white/95 backdrop-blur-2xl border-b border-gray-200/50 shadow-2xl' 
-        : 'bg-white/10 backdrop-blur-sm border-b border-white/20'
+        ? 'bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg' 
+        : 'bg-white/80 backdrop-blur-sm border-b border-white/20'
     }`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 lg:px-8 lg:py-5" aria-label="Global">
         {/* Enhanced Logo - Left Side */}
@@ -384,6 +412,23 @@ export default function Navigation() {
               </div>
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {navHidden && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+            aria-label="Scroll to top"
+          >
+            <ArrowUpIcon className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+          </motion.button>
         )}
       </AnimatePresence>
     </header>
