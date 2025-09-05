@@ -217,3 +217,4 @@ const jetbrainsMono = JetBrains_Mono({
 - Optimized font loading
 - Reduced layout shifts
 - Better Core Web Vitals
+

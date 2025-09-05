@@ -24,7 +24,7 @@ export default function HeroSection() {
           {/* Main Tagline - Mobile Optimized */}
           <div className="space-y-6 sm:space-y-8">
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-normal tracking-tight px-4 py-2"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-normal px-4 py-2"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}

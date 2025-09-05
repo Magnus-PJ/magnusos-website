@@ -94,8 +94,8 @@ export default function LeftSideNavigation() {
             <span className="text-white font-bold text-xl">M</span>
           </div>
           <div className="text-center">
-            <div className="text-xs font-bold text-gray-700 leading-tight">MagnusOS</div>
-            <div className="text-xs text-primary-600 font-medium leading-tight">.ai</div>
+            <div className="text-xs font-bold text-gray-700 leading-normal px-1 py-1">MagnusOS</div>
+            <div className="text-xs text-primary-600 font-medium leading-normal px-1 py-1">.ai</div>
           </div>
         </motion.div>
       </div>
