@@ -746,6 +746,485 @@
     @apply mobile-tab border-blue-500 text-blue-600;
   }
 
+  /* ===== PHASE 2: DESKTOP OPTIMIZATION ===== */
+
+  /* Large Screen Layouts */
+  .desktop-grid-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12;
+  }
+
+  .desktop-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-10;
+  }
+
+  .desktop-grid-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8;
+  }
+
+  .desktop-grid-5 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6;
+  }
+
+  /* Ultra-wide screen layouts */
+  .ultra-wide-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8 xl:gap-10;
+  }
+
+  .ultra-wide-sidebar {
+    @apply grid grid-cols-1 xl:grid-cols-4 2xl:grid-cols-5 gap-8 xl:gap-12;
+  }
+
+  .ultra-wide-main {
+    @apply xl:col-span-3 2xl:col-span-4;
+  }
+
+  .ultra-wide-sidebar-content {
+    @apply xl:col-span-1 2xl:col-span-1;
+  }
+
+  /* Side-by-side content presentation */
+  .side-by-side {
+    @apply flex flex-col lg:flex-row gap-8 xl:gap-12 items-start;
+  }
+
+  .side-by-side-reverse {
+    @apply flex flex-col lg:flex-row-reverse gap-8 xl:gap-12 items-start;
+  }
+
+  .side-by-side-content {
+    @apply flex-1;
+  }
+
+  .side-by-side-aside {
+    @apply w-full lg:w-80 xl:w-96 flex-shrink-0;
+  }
+
+  /* Dashboard-style interfaces */
+  .dashboard-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-6;
+  }
+
+  .dashboard-card {
+    @apply bg-white rounded-xl shadow-card border border-gray-100 p-6 hover:shadow-card-hover transition-all duration-300;
+  }
+
+  .dashboard-card-large {
+    @apply md:col-span-2 lg:col-span-2 xl:col-span-3 2xl:col-span-4;
+  }
+
+  .dashboard-card-medium {
+    @apply md:col-span-1 lg:col-span-1 xl:col-span-2 2xl:col-span-2;
+  }
+
+  .dashboard-card-small {
+    @apply col-span-1;
+  }
+
+  /* Wide screen content optimization */
+  .wide-content {
+    @apply max-w-none xl:max-w-7xl 2xl:max-w-8xl mx-auto;
+  }
+
+  .wide-content-full {
+    @apply max-w-none;
+  }
+
+  .wide-content-centered {
+    @apply max-w-none xl:max-w-6xl 2xl:max-w-7xl mx-auto;
+  }
+
+  /* Multi-column text layouts */
+  .multi-column-text {
+    @apply columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 lg:gap-8;
+  }
+
+  .multi-column-text-2 {
+    @apply columns-1 lg:columns-2 gap-8 xl:gap-12;
+  }
+
+  .multi-column-text-3 {
+    @apply columns-1 md:columns-2 xl:columns-3 gap-6 lg:gap-8;
+  }
+
+  /* Large screen navigation */
+  .desktop-nav-horizontal {
+    @apply hidden lg:flex items-center space-x-8 xl:space-x-12;
+  }
+
+  .desktop-nav-vertical {
+    @apply hidden xl:flex flex-col space-y-4 w-64 2xl:w-80;
+  }
+
+  /* Large screen hero layouts */
+  .desktop-hero-split {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-center;
+  }
+
+  .desktop-hero-centered {
+    @apply max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto text-center;
+  }
+
+  .desktop-hero-wide {
+    @apply max-w-none xl:max-w-7xl 2xl:max-w-8xl mx-auto;
+  }
+
+  /* Advanced Hover Effects */
+  .tooltip {
+    @apply relative inline-block;
+  }
+
+  .tooltip .tooltip-content {
+    @apply invisible absolute z-50 w-64 p-3 text-sm text-white bg-gray-900 rounded-lg shadow-lg opacity-0 transition-all duration-300;
+    @apply transform translate-y-2;
+  }
+
+  .tooltip:hover .tooltip-content {
+    @apply visible opacity-100 transform translate-y-0;
+  }
+
+  .tooltip-top .tooltip-content {
+    @apply bottom-full left-1/2 transform -translate-x-1/2 translate-y-2 mb-2;
+  }
+
+  .tooltip-bottom .tooltip-content {
+    @apply top-full left-1/2 transform -translate-x-1/2 -translate-y-2 mt-2;
+  }
+
+  .tooltip-left .tooltip-content {
+    @apply right-full top-1/2 transform translate-y-1/2 translate-x-2 mr-2;
+  }
+
+  .tooltip-right .tooltip-content {
+    @apply left-full top-1/2 transform translate-y-1/2 -translate-x-2 ml-2;
+  }
+
+  /* Hover previews */
+  .hover-preview {
+    @apply relative group cursor-pointer;
+  }
+
+  .hover-preview .preview-content {
+    @apply invisible absolute z-50 w-80 p-6 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 transition-all duration-300;
+    @apply transform scale-95 translate-y-4;
+  }
+
+  .hover-preview:hover .preview-content {
+    @apply visible opacity-100 transform scale-100 translate-y-0;
+  }
+
+  .hover-preview-top .preview-content {
+    @apply bottom-full left-1/2 transform -translate-x-1/2 translate-y-4 mb-4;
+  }
+
+  .hover-preview-bottom .preview-content {
+    @apply top-full left-1/2 transform -translate-x-1/2 -translate-y-4 mt-4;
+  }
+
+  .hover-preview-left .preview-content {
+    @apply right-full top-1/2 transform translate-y-1/2 translate-x-4 mr-4;
+  }
+
+  .hover-preview-right .preview-content {
+    @apply left-full top-1/2 transform translate-y-1/2 -translate-x-4 ml-4;
+  }
+
+  /* Interactive hover animations */
+  .hover-lift-advanced {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-glow-advanced {
+    @apply transition-all duration-300 ease-out hover:shadow-glow-lg hover:shadow-2xl;
+  }
+
+  .hover-rotate-advanced {
+    @apply transition-all duration-300 ease-out hover:rotate-6 hover:scale-110;
+  }
+
+  .hover-tilt-advanced {
+    @apply transition-all duration-300 ease-out hover:rotate-3 hover:scale-105 hover:shadow-xl;
+  }
+
+  .hover-slide {
+    @apply transition-all duration-300 ease-out hover:translate-x-2;
+  }
+
+  .hover-slide-reverse {
+    @apply transition-all duration-300 ease-out hover:-translate-x-2;
+  }
+
+  .hover-bounce-advanced {
+    @apply transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-1;
+  }
+
+  /* Context-sensitive hover information */
+  .hover-context {
+    @apply relative group;
+  }
+
+  .hover-context .context-info {
+    @apply invisible absolute z-50 w-72 p-4 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 transition-all duration-300;
+    @apply transform scale-95 translate-y-2;
+  }
+
+  .hover-context:hover .context-info {
+    @apply visible opacity-100 transform scale-100 translate-y-0;
+  }
+
+  .hover-context-top .context-info {
+    @apply bottom-full left-1/2 transform -translate-x-1/2 translate-y-2 mb-3;
+  }
+
+  .hover-context-bottom .context-info {
+    @apply top-full left-1/2 transform -translate-x-1/2 -translate-y-2 mt-3;
+  }
+
+  /* Desktop-specific card hover effects */
+  .desktop-card-hover {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/10;
+  }
+
+  .desktop-card-hover-glow {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-glow-lg;
+  }
+
+  .desktop-card-hover-tilt {
+    @apply transition-all duration-300 ease-out hover:rotate-1 hover:scale-105 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  /* Desktop button hover effects */
+  .desktop-btn-hover {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .desktop-btn-hover-glow {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-glow hover:-translate-y-1;
+  }
+
+  .desktop-btn-hover-bounce {
+    @apply transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  /* Desktop navigation hover effects */
+  .desktop-nav-hover {
+    @apply transition-all duration-200 ease-out hover:text-blue-600 hover:scale-105;
+  }
+
+  .desktop-nav-hover-underline {
+    @apply transition-all duration-200 ease-out hover:text-blue-600 relative;
+  }
+
+  .desktop-nav-hover-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200;
+  }
+
+  .desktop-nav-hover-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Desktop image hover effects */
+  .desktop-image-hover {
+    @apply transition-all duration-300 ease-out hover:scale-110 hover:shadow-2xl;
+  }
+
+  .desktop-image-hover-overlay {
+    @apply relative overflow-hidden group;
+  }
+
+  .desktop-image-hover-overlay::before {
+    content: '';
+    @apply absolute inset-0 bg-black bg-opacity-0 transition-all duration-300 z-10;
+  }
+
+  .desktop-image-hover-overlay:hover::before {
+    @apply bg-opacity-20;
+  }
+
+  .desktop-image-hover-overlay img {
+    @apply transition-all duration-300 ease-out group-hover:scale-110;
+  }
+
+  /* Keyboard Navigation & Accessibility */
+  .keyboard-navigation {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .keyboard-navigation-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-opacity-75;
+  }
+
+  .keyboard-navigation-subtle {
+    @apply focus:outline-none focus:ring-1 focus:ring-blue-400 focus:ring-offset-1;
+  }
+
+  /* Skip navigation links */
+  .skip-nav {
+    @apply absolute -top-10 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50;
+    @apply focus:top-4 transition-all duration-200;
+  }
+
+  .skip-nav:focus {
+    @apply top-4;
+  }
+
+  /* Focus management system */
+  .focus-trap {
+    @apply focus:outline-none;
+  }
+
+  .focus-trap:focus {
+    @apply ring-2 ring-blue-500 ring-offset-2;
+  }
+
+  /* Keyboard shortcuts */
+  .keyboard-shortcut {
+    @apply text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded border;
+  }
+
+  .keyboard-shortcut-hint {
+    @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2;
+    @apply bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-200;
+  }
+
+  .keyboard-shortcut:hover .keyboard-shortcut-hint {
+    @apply opacity-100;
+  }
+
+  /* Enhanced focus states for different elements */
+  .focus-button {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:scale-105 transition-all duration-200;
+  }
+
+  .focus-link {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:underline transition-all duration-200;
+  }
+
+  .focus-input {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:border-blue-500 transition-all duration-200;
+  }
+
+  .focus-card {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:scale-105 focus:shadow-lg transition-all duration-200;
+  }
+
+  /* Tab navigation enhancements */
+  .tab-navigation {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .tab-navigation-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:bg-blue-50 focus:text-blue-700 transition-all duration-200;
+  }
+
+  /* Arrow key navigation */
+  .arrow-navigation {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .arrow-navigation-horizontal {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:translate-x-1 transition-all duration-200;
+  }
+
+  .arrow-navigation-vertical {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:translate-y-1 transition-all duration-200;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .high-contrast {
+      @apply border-2 border-black;
+    }
+    
+    .high-contrast-focus {
+      @apply focus:ring-4 focus:ring-black focus:ring-offset-4;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .reduce-motion {
+      @apply transition-none;
+    }
+    
+    .reduce-motion * {
+      @apply transition-none;
+    }
+  }
+
+  /* Screen reader only content */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .sr-only-focusable:focus {
+    @apply static w-auto h-auto p-0 m-0 overflow-visible whitespace-normal;
+    clip: auto;
+  }
+
+  /* Focus indicators for different states */
+  .focus-indicator {
+    @apply relative;
+  }
+
+  .focus-indicator::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg ring-2 ring-transparent transition-all duration-200;
+  }
+
+  .focus-indicator:focus::before {
+    @apply ring-blue-500 ring-offset-2;
+  }
+
+  /* Keyboard navigation for complex components */
+  .keyboard-menu {
+    @apply focus:outline-none;
+  }
+
+  .keyboard-menu-item {
+    @apply focus:outline-none focus:bg-blue-100 focus:text-blue-700;
+    @apply focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply transition-all duration-200;
+  }
+
+  .keyboard-menu-item:focus {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  /* Enhanced form accessibility */
+  .form-field {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:border-blue-500 transition-all duration-200;
+  }
+
+  .form-label {
+    @apply focus-within:text-blue-600 transition-colors duration-200;
+  }
+
+  .form-error {
+    @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+    @apply focus:border-red-500 transition-all duration-200;
+  }
+
+  /* Desktop-specific keyboard navigation */
+  .desktop-keyboard-nav {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply focus:scale-105 focus:shadow-lg transition-all duration-200;
+  }
+
+  .desktop-keyboard-nav-subtle {
+    @apply focus:outline-none focus:ring-1 focus:ring-blue-400 focus:ring-offset-1;
+    @apply focus:scale-102 transition-all duration-200;
+  }
+
   /* Healthcare-specific styles */
   .healthcare-icon {
     @apply w-6 h-6 text-indigo-600;
