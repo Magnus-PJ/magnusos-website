@@ -1,9 +1,7 @@
 {
-  "/solutions/cosmetology/page": "app/solutions/cosmetology/page.js",
   "/about/page": "app/about/page.js",
-  "/resources/page": "app/resources/page.js",
-  "/blog/page": "app/blog/page.js",
+  "/solutions/cosmetology/page": "app/solutions/cosmetology/page.js",
   "/page": "app/page.js",
-  "/solutions/his/page": "app/solutions/his/page.js",
-  "/solutions/radiology/page": "app/solutions/radiology/page.js"
+  "/blog/page": "app/blog/page.js",
+  "/resources/page": "app/resources/page.js"
 }

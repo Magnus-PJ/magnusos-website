@@ -1,3 +1,4 @@
+
 # MagnusOS.ai - AI-First Healthcare Operating System Website
 
 ## Overview
@@ -90,6 +91,7 @@ magnusos-website/
 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
 
 ### Available Scripts
 
@@ -265,4 +267,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **MagnusOS.ai** - Transforming healthcare with AI-powered, unified solutions.
+
 

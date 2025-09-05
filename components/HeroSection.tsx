@@ -14,7 +14,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content - Mobile First */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,12 +24,12 @@ export default function HeroSection() {
           {/* Main Tagline - Mobile Optimized */}
           <div className="space-y-6 sm:space-y-8">
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-normal px-4 py-2"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-loose px-8 py-6 overflow-visible whitespace-normal"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="block bg-gradient-to-r from-primary-600 via-healthcare-600 to-primary-700 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-primary-600 via-healthcare-600 to-primary-700 bg-clip-text text-transparent magnusos-text">
                 MagnusOS
               </span>
               <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-700 mt-2 sm:mt-4">

@@ -33,6 +33,20 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  /* Ensure text is never clipped */
+  h1, h2, h3, h4, h5, h6 {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: normal !important;
+  }
+
+  /* Fix MagnusOS G letter cut-off */
+  .magnusos-text {
+    line-height: 1.8 !important;
+    padding-bottom: 0.5rem !important;
+    overflow: visible !important;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -191,15 +205,15 @@
 
   /* Responsive typography */
   .heading-1 {
-    @apply text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl leading-normal px-4 py-2;
+    @apply text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl leading-loose px-6 py-4;
   }
 
   .heading-2 {
-    @apply text-3xl font-bold text-gray-900 sm:text-4xl leading-normal px-3 py-1;
+    @apply text-2xl font-bold text-gray-900 sm:text-3xl leading-loose px-4 py-3;
   }
 
   .heading-3 {
-    @apply text-2xl font-bold text-gray-900 sm:text-3xl leading-normal px-2 py-1;
+    @apply text-xl font-bold text-gray-900 sm:text-2xl leading-loose px-3 py-2;
   }
 
   .body-large {

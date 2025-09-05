@@ -114,7 +114,7 @@ export default function Navigation() {
                 </motion.div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-normal">
+                <span className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent magnusos-text px-3 py-2">
                   MagnusOS
                   <span className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">.ai</span>
                 </span>

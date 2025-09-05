@@ -30,7 +30,7 @@ export default function CallToAction() {
           {/* Main CTA Content */}
           <div className="space-y-6">
             <motion.h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-normal px-4 py-2"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-relaxed px-6 py-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
