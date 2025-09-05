@@ -8,6 +8,8 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 const poppins = Poppins({ 
@@ -15,13 +17,17 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
   display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ['latin'],
   variable: '--font-jetbrains-mono',
   display: 'swap',
-  weight: ['400', '500', '600']
+  weight: ['400', '500', '600'],
+  preload: true,
+  fallback: ['Consolas', 'Monaco', 'monospace'],
 })
 
 export const metadata: Metadata = {
@@ -119,7 +125,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0ea5e9" />
       </head>
-                    <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+                    <body className={`${inter.className} antialiased bg-white text-gray-900 font-feature-settings-["rlig","calt"]`}>
                 <Navigation />
                 {children}
                 <Footer />

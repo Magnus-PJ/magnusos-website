@@ -76,53 +76,156 @@
 }
 
 @layer components {
-  /* Button variants */
+  /* Enhanced Button variants with micro-interactions */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-300 ease-out;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-lg border border-blue-600 px-6 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 transition-colors duration-200;
+    @apply inline-flex items-center justify-center rounded-lg border border-blue-600 px-6 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out;
   }
 
-  /* Enhanced Typography Classes */
+  /* Specialty-specific button variants */
+  .btn-radiology {
+    @apply inline-flex items-center justify-center rounded-lg bg-radiology-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-radiology-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-radiology-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-hospital {
+    @apply inline-flex items-center justify-center rounded-lg bg-hospital-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-hospital-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hospital-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-laboratory {
+    @apply inline-flex items-center justify-center rounded-lg bg-laboratory-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-laboratory-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-laboratory-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-pharmacy {
+    @apply inline-flex items-center justify-center rounded-lg bg-pharmacy-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-pharmacy-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pharmacy-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-dental {
+    @apply inline-flex items-center justify-center rounded-lg bg-dental-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-dental-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dental-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-fertility {
+    @apply inline-flex items-center justify-center rounded-lg bg-fertility-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-fertility-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fertility-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-cosmetology {
+    @apply inline-flex items-center justify-center rounded-lg bg-cosmetology-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-cosmetology-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cosmetology-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-nuclear {
+    @apply inline-flex items-center justify-center rounded-lg bg-nuclear-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-nuclear-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nuclear-600 transition-all duration-300 ease-out;
+  }
+
+  .btn-erp {
+    @apply inline-flex items-center justify-center rounded-lg bg-erp-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-erp-700 hover:shadow-lg hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-erp-600 transition-all duration-300 ease-out;
+  }
+
+  /* Enhanced Typography Classes with Dynamic Scaling */
   .text-display { 
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: var(--text-5xl);
-    line-height: var(--leading-tight);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  .text-heading { 
+  .text-heading-1 { 
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .text-heading-2 { 
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: var(--text-3xl);
-    line-height: var(--leading-snug);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .text-heading-3 { 
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+    line-height: 1.4;
+  }
+
+  .text-heading-4 { 
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  .text-body-large { 
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
   }
 
   .text-body { 
     font-family: var(--font-primary);
     font-weight: 400;
-    font-size: var(--text-base);
-    line-height: var(--leading-relaxed);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.6;
+  }
+
+  .text-body-small { 
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: clamp(0.75rem, 1.25vw, 0.875rem);
+    line-height: 1.5;
   }
 
   .text-caption { 
     font-family: var(--font-primary);
     font-weight: 400;
-    font-size: var(--text-sm);
-    line-height: var(--leading-normal);
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    line-height: 1.4;
+    color: rgb(107 114 128);
   }
 
   .text-code { 
     font-family: var(--font-mono);
     font-weight: 400;
-    font-size: var(--text-sm);
-    line-height: var(--leading-normal);
+    font-size: clamp(0.75rem, 1.25vw, 0.875rem);
+    line-height: 1.5;
+    background-color: rgb(243 244 246);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  /* Mobile-optimized typography */
+  .text-mobile-display {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .text-mobile-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.25rem, 6vw, 1.875rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .text-mobile-body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    line-height: 1.6;
   }
 
   /* Responsive Typography */
@@ -136,13 +239,113 @@
     .text-heading { font-size: var(--text-5xl); }
   }
 
-  /* Card styles */
+  /* Enhanced Card styles with specialty theming */
   .card {
     @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6;
   }
 
   .card-hover {
-    @apply card hover:shadow-xl transition-shadow duration-200;
+    @apply card hover:shadow-xl hover:scale-105 transition-all duration-300 ease-out;
+  }
+
+  /* Specialty-themed cards */
+  .card-radiology {
+    @apply bg-white rounded-xl shadow-lg border border-radiology-200 p-6 hover:shadow-xl hover:scale-105 hover:border-radiology-300 transition-all duration-300 ease-out;
+  }
+
+  .card-hospital {
+    @apply bg-white rounded-xl shadow-lg border border-hospital-200 p-6 hover:shadow-xl hover:scale-105 hover:border-hospital-300 transition-all duration-300 ease-out;
+  }
+
+  .card-laboratory {
+    @apply bg-white rounded-xl shadow-lg border border-laboratory-200 p-6 hover:shadow-xl hover:scale-105 hover:border-laboratory-300 transition-all duration-300 ease-out;
+  }
+
+  .card-pharmacy {
+    @apply bg-white rounded-xl shadow-lg border border-pharmacy-200 p-6 hover:shadow-xl hover:scale-105 hover:border-pharmacy-300 transition-all duration-300 ease-out;
+  }
+
+  .card-dental {
+    @apply bg-white rounded-xl shadow-lg border border-dental-200 p-6 hover:shadow-xl hover:scale-105 hover:border-dental-300 transition-all duration-300 ease-out;
+  }
+
+  .card-fertility {
+    @apply bg-white rounded-xl shadow-lg border border-fertility-200 p-6 hover:shadow-xl hover:scale-105 hover:border-fertility-300 transition-all duration-300 ease-out;
+  }
+
+  .card-cosmetology {
+    @apply bg-white rounded-xl shadow-lg border border-cosmetology-200 p-6 hover:shadow-xl hover:scale-105 hover:border-cosmetology-300 transition-all duration-300 ease-out;
+  }
+
+  .card-nuclear {
+    @apply bg-white rounded-xl shadow-lg border border-nuclear-200 p-6 hover:shadow-xl hover:scale-105 hover:border-nuclear-300 transition-all duration-300 ease-out;
+  }
+
+  .card-erp {
+    @apply bg-white rounded-xl shadow-lg border border-erp-200 p-6 hover:shadow-xl hover:scale-105 hover:border-erp-300 transition-all duration-300 ease-out;
+  }
+
+  /* Enhanced card system with depth levels */
+  .card-depth-1 {
+    @apply bg-white rounded-lg shadow-card border border-gray-100 p-4;
+  }
+
+  .card-depth-2 {
+    @apply bg-white rounded-lg shadow-card-hover border border-gray-200 p-6;
+  }
+
+  .card-depth-3 {
+    @apply bg-white rounded-xl shadow-card-elevated border border-gray-200 p-8;
+  }
+
+  .card-depth-4 {
+    @apply bg-white rounded-xl shadow-card-floating border border-gray-300 p-8;
+  }
+
+  /* Interactive card states */
+  .card-interactive {
+    @apply card-depth-2 hover:shadow-card-elevated hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-elevated {
+    @apply card-depth-3 hover:shadow-card-floating hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  /* Specialty-themed interactive cards */
+  .card-interactive-radiology {
+    @apply card-depth-2 border-radiology-200 hover:shadow-glow-blue hover:border-radiology-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-hospital {
+    @apply card-depth-2 border-hospital-200 hover:shadow-glow-green hover:border-hospital-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-laboratory {
+    @apply card-depth-2 border-laboratory-200 hover:shadow-glow-purple hover:border-laboratory-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-pharmacy {
+    @apply card-depth-2 border-pharmacy-200 hover:shadow-glow-orange hover:border-pharmacy-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-dental {
+    @apply card-depth-2 border-dental-200 hover:shadow-glow-green hover:border-dental-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-fertility {
+    @apply card-depth-2 border-fertility-200 hover:shadow-glow-pink hover:border-fertility-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-cosmetology {
+    @apply card-depth-2 border-cosmetology-200 hover:shadow-glow-pink hover:border-cosmetology-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-nuclear {
+    @apply card-depth-2 border-nuclear-200 hover:shadow-glow-orange hover:border-nuclear-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .card-interactive-erp {
+    @apply card-depth-2 border-erp-200 hover:shadow-glow-blue hover:border-erp-300 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer;
   }
 
   /* Input styles */
@@ -150,13 +353,55 @@
     @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm;
   }
 
-  /* Section styles */
+  /* Enhanced Section styles with consistent spacing */
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
+  }
+
+  .section-padding-sm {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+
+  .section-padding-lg {
+    @apply py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32;
   }
 
   .container-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16;
+  }
+
+  .container-padding-sm {
     @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-padding-lg {
+    @apply px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+  }
+
+  /* Consistent spacing scale */
+  .space-y-consistent > * + * {
+    margin-top: clamp(1rem, 3vw, 2rem);
+  }
+
+  .space-y-consistent-sm > * + * {
+    margin-top: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .space-y-consistent-lg > * + * {
+    margin-top: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Visual breathing room */
+  .breathing-room {
+    @apply space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20;
+  }
+
+  .breathing-room-sm {
+    @apply space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10;
+  }
+
+  .breathing-room-lg {
+    @apply space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24;
   }
 
   /* Gradient backgrounds */
@@ -173,7 +418,7 @@
     @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
   }
 
-  /* Animation utilities */
+  /* Enhanced Animation utilities */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out;
   }
@@ -182,8 +427,323 @@
     animation: slideUp 0.6s ease-out;
   }
 
+  .animate-slide-down {
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.6s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.6s ease-out;
+  }
+
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out;
+  }
+
+  .animate-scale-out {
+    animation: scaleOut 0.4s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.8s ease-in-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Enhanced Loading state animations */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  .animate-ping-slow {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* Loading skeleton animations */
+  .skeleton {
+    @apply bg-gray-200 animate-pulse rounded;
+  }
+
+  .skeleton-text {
+    @apply bg-gray-200 animate-pulse rounded h-4;
+  }
+
+  .skeleton-title {
+    @apply bg-gray-200 animate-pulse rounded h-6;
+  }
+
+  .skeleton-avatar {
+    @apply bg-gray-200 animate-pulse rounded-full;
+  }
+
+  .skeleton-card {
+    @apply bg-gray-200 animate-pulse rounded-lg;
+  }
+
+  /* Page transition animations */
+  .page-enter {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .page-exit {
+    animation: fadeOut 0.4s ease-in;
+  }
+
+  .page-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .page-slide-down {
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .page-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  /* Staggered animations for lists */
+  .stagger-animation > * {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Hover micro-interactions */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:shadow-glow;
+  }
+
+  .hover-bounce {
+    @apply transition-all duration-300 ease-out hover:scale-110;
+  }
+
+  .hover-rotate {
+    @apply transition-all duration-300 ease-out hover:rotate-3;
+  }
+
+  .hover-tilt {
+    @apply transition-all duration-300 ease-out hover:rotate-1 hover:scale-105;
+  }
+
+  /* Focus micro-interactions */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200;
+  }
+
+  .focus-scale {
+    @apply focus:outline-none focus:scale-105 transition-all duration-200;
+  }
+
+  /* Button micro-interactions */
+  .btn-micro-interaction {
+    @apply transition-all duration-200 ease-out active:scale-95;
+  }
+
+  .btn-ripple {
+    @apply relative overflow-hidden transition-all duration-200 ease-out active:scale-95;
+  }
+
+  .btn-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-ripple:active::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Touch interaction enhancements */
+  .touch-feedback {
+    @apply transition-all duration-150 ease-out active:scale-95 active:bg-gray-100;
+  }
+
+  .touch-lift {
+    @apply transition-all duration-200 ease-out active:scale-105 active:shadow-lg;
+  }
+
+  .touch-glow {
+    @apply transition-all duration-200 ease-out active:shadow-glow;
+  }
+
+  /* Mobile-specific touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  .touch-target-large {
+    @apply min-h-[56px] min-w-[56px] flex items-center justify-center;
+  }
+
+  /* Swipe gesture indicators */
+  .swipe-indicator {
+    @apply relative overflow-hidden;
+  }
+
+  .swipe-indicator::after {
+    content: '← Swipe →';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .swipe-indicator:hover::after {
+    opacity: 1;
+  }
+
+  /* Mobile navigation enhancements */
+  .mobile-nav-item {
+    @apply touch-target hover:bg-gray-100 active:bg-gray-200 transition-colors duration-150;
+  }
+
+  .mobile-nav-item-active {
+    @apply touch-target bg-blue-100 text-blue-700 active:bg-blue-200;
+  }
+
+  /* Pull-to-refresh indicator */
+  .pull-to-refresh {
+    @apply relative overflow-hidden;
+  }
+
+  .pull-to-refresh::before {
+    content: '↓ Pull to refresh';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(59, 130, 246, 0.9);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-size: 0.75rem;
+    transition: top 0.3s ease;
+  }
+
+  .pull-to-refresh.pulling::before {
+    top: 0;
+  }
+
+  /* Mobile card interactions */
+  .mobile-card {
+    @apply touch-target hover:shadow-md active:shadow-lg active:scale-98 transition-all duration-200;
+  }
+
+  .mobile-card-interactive {
+    @apply touch-target hover:shadow-md active:shadow-lg active:scale-95 transition-all duration-150;
+  }
+
+  /* Mobile button enhancements */
+  .mobile-btn {
+    @apply touch-target-large font-semibold rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .mobile-btn-primary {
+    @apply mobile-btn bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+  }
+
+  .mobile-btn-secondary {
+    @apply mobile-btn bg-gray-100 text-gray-900 hover:bg-gray-200 active:bg-gray-300;
+  }
+
+  /* Mobile form enhancements */
+  .mobile-input {
+    @apply touch-target-large border border-gray-300 rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200;
+  }
+
+  .mobile-textarea {
+    @apply min-h-[120px] border border-gray-300 rounded-lg px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200;
+  }
+
+  /* Mobile list interactions */
+  .mobile-list-item {
+    @apply touch-target hover:bg-gray-50 active:bg-gray-100 border-b border-gray-100 transition-colors duration-150;
+  }
+
+  .mobile-list-item-interactive {
+    @apply touch-target hover:bg-gray-50 active:bg-gray-100 active:scale-98 border-b border-gray-100 transition-all duration-150;
+  }
+
+  /* Mobile modal interactions */
+  .mobile-modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300;
+  }
+
+  .mobile-modal {
+    @apply fixed bottom-0 left-0 right-0 bg-white rounded-t-xl shadow-2xl transform transition-transform duration-300;
+  }
+
+  .mobile-modal.slide-up {
+    @apply translate-y-full;
+  }
+
+  .mobile-modal.slide-down {
+    @apply translate-y-0;
+  }
+
+  /* Mobile drawer interactions */
+  .mobile-drawer {
+    @apply fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300;
+  }
+
+  .mobile-drawer.slide-left {
+    @apply -translate-x-full;
+  }
+
+  .mobile-drawer.slide-right {
+    @apply translate-x-0;
+  }
+
+  /* Mobile tab interactions */
+  .mobile-tab {
+    @apply touch-target flex-1 text-center border-b-2 border-transparent hover:border-gray-300 active:border-blue-500 transition-colors duration-200;
+  }
+
+  .mobile-tab-active {
+    @apply mobile-tab border-blue-500 text-blue-600;
   }
 
   /* Healthcare-specific styles */
@@ -201,6 +761,117 @@
 
   .error-icon {
     @apply w-6 h-6 text-red-600;
+  }
+
+  /* Specialty-specific color utilities */
+  .radiology-theme {
+    @apply bg-gradient-to-br from-radiology-50 via-radiology-100 to-radiology-200;
+  }
+
+  .hospital-theme {
+    @apply bg-gradient-to-br from-hospital-50 via-hospital-100 to-hospital-200;
+  }
+
+  .laboratory-theme {
+    @apply bg-gradient-to-br from-laboratory-50 via-laboratory-100 to-laboratory-200;
+  }
+
+  .pharmacy-theme {
+    @apply bg-gradient-to-br from-pharmacy-50 via-pharmacy-100 to-pharmacy-200;
+  }
+
+  .dental-theme {
+    @apply bg-gradient-to-br from-dental-50 via-dental-100 to-dental-200;
+  }
+
+  .fertility-theme {
+    @apply bg-gradient-to-br from-fertility-50 via-fertility-100 to-fertility-200;
+  }
+
+  .cosmetology-theme {
+    @apply bg-gradient-to-br from-cosmetology-50 via-cosmetology-100 to-cosmetology-200;
+  }
+
+  .nuclear-theme {
+    @apply bg-gradient-to-br from-nuclear-50 via-nuclear-100 to-nuclear-200;
+  }
+
+  .erp-theme {
+    @apply bg-gradient-to-br from-erp-50 via-erp-100 to-erp-200;
+  }
+
+  /* Enhanced hover states with color transitions */
+  .hover-radiology {
+    @apply hover:bg-radiology-100 hover:text-radiology-700 transition-all duration-300;
+  }
+
+  .hover-hospital {
+    @apply hover:bg-hospital-100 hover:text-hospital-700 transition-all duration-300;
+  }
+
+  .hover-laboratory {
+    @apply hover:bg-laboratory-100 hover:text-laboratory-700 transition-all duration-300;
+  }
+
+  .hover-pharmacy {
+    @apply hover:bg-pharmacy-100 hover:text-pharmacy-700 transition-all duration-300;
+  }
+
+  .hover-dental {
+    @apply hover:bg-dental-100 hover:text-dental-700 transition-all duration-300;
+  }
+
+  .hover-fertility {
+    @apply hover:bg-fertility-100 hover:text-fertility-700 transition-all duration-300;
+  }
+
+  .hover-cosmetology {
+    @apply hover:bg-cosmetology-100 hover:text-cosmetology-700 transition-all duration-300;
+  }
+
+  .hover-nuclear {
+    @apply hover:bg-nuclear-100 hover:text-nuclear-700 transition-all duration-300;
+  }
+
+  .hover-erp {
+    @apply hover:bg-erp-100 hover:text-erp-700 transition-all duration-300;
+  }
+
+  /* Focus states with specialty colors */
+  .focus-radiology {
+    @apply focus:ring-radiology-500 focus:border-radiology-500;
+  }
+
+  .focus-hospital {
+    @apply focus:ring-hospital-500 focus:border-hospital-500;
+  }
+
+  .focus-laboratory {
+    @apply focus:ring-laboratory-500 focus:border-laboratory-500;
+  }
+
+  .focus-pharmacy {
+    @apply focus:ring-pharmacy-500 focus:border-pharmacy-500;
+  }
+
+  .focus-dental {
+    @apply focus:ring-dental-500 focus:border-dental-500;
+  }
+
+  .focus-fertility {
+    @apply focus:ring-fertility-500 focus:border-fertility-500;
+  }
+
+  .focus-cosmetology {
+    @apply focus:ring-cosmetology-500 focus:border-cosmetology-500;
+  }
+
+  .focus-nuclear {
+    @apply focus:ring-nuclear-500 focus:border-nuclear-500;
+  }
+
+  .focus-erp {
+    @apply focus:ring-erp-500 focus:border-erp-500;
   }
 
   /* Responsive typography */
@@ -258,10 +929,15 @@
   }
 }
 
-/* Custom animations */
+/* Enhanced Custom animations with micro-interactions */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes slideUp {
@@ -269,9 +945,56 @@
   100% { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(20px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(-20px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
 @keyframes scaleIn {
   0% { transform: scale(0.95); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleOut {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4); }
 }
 
 @keyframes pulse-glow {

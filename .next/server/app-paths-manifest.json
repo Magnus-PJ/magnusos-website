@@ -1,22 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js",
   "/about/page": "app/about/page.js",
-  "/resources/page": "app/resources/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/solutions/dental/page": "app/solutions/dental/page.js",
-  "/privacy/page": "app/privacy/page.js",
-  "/solutions/cosmetology/page": "app/solutions/cosmetology/page.js",
-  "/solutions/fertility/page": "app/solutions/fertility/page.js",
-  "/solutions/erp/page": "app/solutions/erp/page.js",
-  "/careers/page": "app/careers/page.js",
-  "/solutions/nuclear-medicine/page": "app/solutions/nuclear-medicine/page.js",
-  "/solutions/his/page": "app/solutions/his/page.js",
-  "/solutions/pharmacy-crm/page": "app/solutions/pharmacy-crm/page.js",
-  "/solutions/laboratory/page": "app/solutions/laboratory/page.js",
-  "/solutions/radiology/page": "app/solutions/radiology/page.js",
-  "/revenue-model/page": "app/revenue-model/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/support/page": "app/support/page.js"
+  "/solutions/his/page": "app/solutions/his/page.js"
 }
