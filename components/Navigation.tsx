@@ -8,38 +8,29 @@ import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '/' },
   { 
-    name: 'Tools', 
-    href: '#',
+    name: 'Solutions', 
+    href: '/healthcare-solutions',
     dropdown: [
-      { name: 'Hospital Management', href: '/solutions/his', description: 'Complete hospital operations platform', icon: '🏥' },
-      { name: 'Imaging Systems', href: '/solutions/radiology', description: 'AI-powered radiology workflow', icon: '📷' },
-      { name: 'Lab Operations', href: '/solutions/laboratory', description: 'Laboratory management system', icon: '🧪' },
-      { name: 'Pharmacy & CRM', href: '/solutions/pharmacy-crm', description: 'Pharmacy and patient management', icon: '💊' },
-      { name: 'Enterprise ERP', href: '/solutions/erp', description: 'Healthcare resource planning', icon: '⚙️' }
+      { name: 'Hospital Information System', href: '/solutions/his', description: 'Complete hospital operations platform', icon: '🏥' },
+      { name: 'Radiology Management', href: '/solutions/radiology', description: 'AI-powered imaging workflow', icon: '📷' },
+      { name: 'Laboratory System', href: '/solutions/laboratory', description: 'Advanced lab management', icon: '🧪' },
+      { name: 'Pharmacy CRM', href: '/solutions/pharmacy-crm', description: 'Pharmacy and patient management', icon: '💊' },
+      { name: 'Healthcare ERP', href: '/solutions/erp', description: 'Enterprise resource planning', icon: '⚙️' }
     ]
   },
   { 
     name: 'Specialties', 
     href: '#',
     dropdown: [
-      { name: 'Fertility Care', href: '/solutions/fertility', description: 'IVF and reproductive medicine', icon: '👶' },
-      { name: 'Aesthetic Medicine', href: '/solutions/cosmetology', description: 'Cosmetic and aesthetic clinics', icon: '✨' },
-      { name: 'Dental Practice', href: '/solutions/dental', description: 'Dental clinic management', icon: '🦷' },
-      { name: 'Nuclear Medicine', href: '/solutions/nuclear-medicine', description: 'Nuclear imaging and therapy', icon: '☢️' }
+      { name: 'Fertility & IVF', href: '/solutions/fertility', description: 'Reproductive medicine solutions', icon: '👶' },
+      { name: 'Aesthetic Medicine', href: '/solutions/cosmetology', description: 'Cosmetic clinic management', icon: '✨' },
+      { name: 'Dental Practice', href: '/solutions/dental', description: 'Dental clinic solutions', icon: '🦷' },
+      { name: 'Nuclear Medicine', href: '/solutions/nuclear-medicine', description: 'Nuclear imaging & therapy', icon: '☢️' }
     ]
   },
   { name: 'About', href: '/about' },
   { name: 'Resources', href: '/resources' },
   { name: 'Blog', href: '/blog' },
-  { 
-    name: 'Company', 
-    href: '#',
-    dropdown: [
-      { name: 'Careers', href: '/careers', description: 'Join our healthcare mission', icon: '💼' },
-      { name: 'Pricing', href: '/revenue-model', description: 'Flexible pricing options', icon: '💰' },
-      { name: 'Support', href: '/support', description: 'Technical support center', icon: '🆘' }
-    ]
-  },
   { name: 'Contact', href: '/contact' }
 ]
 
@@ -125,24 +116,29 @@ export default function Navigation() {
             >
               <div className="relative">
                 <div className="w-10 h-10 lg:w-14 lg:h-14 bg-gradient-to-br from-primary-600 via-healthcare-600 to-primary-700 rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-xl lg:shadow-2xl group-hover:shadow-2xl lg:group-hover:shadow-3xl transition-all duration-300 border border-white/20">
-                  <span className="text-white font-bold text-xl lg:text-3xl tracking-tight leading-normal px-1 py-1">M</span>
+                  {/* Modern Healthcare Cross Icon */}
+                  <svg className="w-6 h-6 lg:w-8 lg:h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                  </svg>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-2xl lg:rounded-3xl"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl lg:rounded-3xl"></div>
                 </div>
                 <motion.div
-                  className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-3 h-3 lg:w-5 lg:h-5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-lg"
+                  className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-3 h-3 lg:w-5 lg:h-5 bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 rounded-full shadow-lg"
                   animate={{ 
-                    scale: [1, 1.3, 1],
+                    scale: [1, 1.2, 1],
                     rotate: [0, 180, 360],
-                    y: [0, -2, 0]
+                    y: [0, -1, 0]
                   }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <SparklesIcon className="w-2 h-2 lg:w-3 lg:h-3 text-white" />
                 </motion.div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent magnusos-text px-3 py-2">
+                <span className="text-xl lg:text-4xl font-extrabold bg-gradient-to-r from-gray-900 via-primary-700 to-healthcare-700 bg-clip-text text-transparent leading-normal px-3 py-2">
                   MagnusOS
                   <span className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-primary-600 to-healthcare-600 bg-clip-text text-transparent">.ai</span>
                 </span>
@@ -228,13 +224,13 @@ export default function Navigation() {
         </div>
 
         {/* CTA Buttons - Right Side */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 lg:items-center">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3 lg:items-center">
           <motion.div
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href="/demo"
+              href="/contact"
               className="text-sm font-semibold leading-6 text-gray-700 hover:text-primary-600 transition-all duration-200 py-3 px-4 rounded-xl hover:bg-white/50 backdrop-blur-sm"
             >
               Demo
@@ -246,17 +242,10 @@ export default function Navigation() {
           >
             <Link
               href="/contact"
-              className="relative group bg-gradient-to-r from-primary-600 to-healthcare-700 text-white px-8 py-4 rounded-2xl font-semibold text-sm shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden min-w-[140px] text-center border border-white/20"
+              className="relative group bg-gradient-to-r from-primary-600 to-healthcare-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden text-center border border-white/20"
             >
               <span className="relative z-10 whitespace-nowrap">Get Started</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-700 to-healthcare-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.6 }}
-              />
             </Link>
           </motion.div>
         </div>
@@ -299,7 +288,12 @@ export default function Navigation() {
                   <span className="sr-only">MagnusOS.ai</span>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-healthcare-500 rounded-xl flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-xl">M</span>
+                      {/* Modern Healthcare Cross Icon */}
+                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                      </svg>
                     </div>
                     <div className="flex flex-col">
                       <span className="text-xl font-bold text-gray-900">MagnusOS.ai</span>

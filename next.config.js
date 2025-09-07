@@ -12,6 +12,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true, // Required for static export
   },
   
   // Performance Optimization
@@ -97,7 +98,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Final Bundle Optimization
-  output: 'standalone',
+  output: 'export',
 
   // Performance Optimizations
   experimental: {

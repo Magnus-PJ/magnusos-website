@@ -6,11 +6,11 @@ import { ChevronDownIcon, PlayIcon, ArrowRightIcon } from '@heroicons/react/24/o
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-healthcare-50 pt-16 sm:pt-20">
-      {/* Background Elements - Mobile Optimized */}
+      {/* Optimized Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 sm:-top-40 sm:-right-40 w-40 h-40 sm:w-80 sm:h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-bounce-gentle"></div>
-        <div className="absolute -bottom-20 -left-20 sm:-bottom-40 sm:-left-40 w-40 h-40 sm:w-80 sm:h-80 bg-healthcare-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-bounce-gentle" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse-glow"></div>
+        <div className="absolute -top-20 -right-20 sm:-top-40 sm:-right-40 w-40 h-40 sm:w-80 sm:h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-60"></div>
+        <div className="absolute -bottom-20 -left-20 sm:-bottom-40 sm:-left-40 w-40 h-40 sm:w-80 sm:h-80 bg-healthcare-200 rounded-full mix-blend-multiply filter blur-xl opacity-60"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-96 sm:h-96 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-40"></div>
       </div>
 
       {/* Content - Mobile First */}
@@ -29,7 +29,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="block bg-gradient-to-r from-primary-600 via-healthcare-600 to-primary-700 bg-clip-text text-transparent magnusos-text">
+              <span className="block bg-gradient-to-r from-primary-600 via-healthcare-600 to-primary-700 bg-clip-text text-transparent leading-normal">
                 MagnusOS
               </span>
               <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-700 mt-2 sm:mt-4">
@@ -127,31 +127,31 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Floating Elements - Mobile Optimized */}
+      {/* Optimized Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute top-16 left-4 sm:top-20 sm:left-10 w-2 h-2 sm:w-4 sm:h-4 bg-primary-400 rounded-full"
           animate={{ 
-            y: [0, -15, 0],
-            opacity: [0.5, 1, 0.5]
+            y: [0, -10, 0],
+            opacity: [0.4, 0.8, 0.4]
           }}
-          transition={{ duration: 3, repeat: Infinity }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute top-32 right-4 sm:top-40 sm:right-20 w-2 h-2 sm:w-3 sm:h-3 bg-healthcare-400 rounded-full"
           animate={{ 
-            y: [0, 12, 0],
-            opacity: [0.5, 1, 0.5]
+            y: [0, 8, 0],
+            opacity: [0.4, 0.8, 0.4]
           }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         <motion.div
           className="absolute bottom-32 left-4 sm:bottom-40 sm:left-20 w-2 h-2 sm:w-2 sm:h-2 bg-success-400 rounded-full"
           animate={{ 
-            y: [0, -8, 0],
-            opacity: [0.5, 1, 0.5]
+            y: [0, -6, 0],
+            opacity: [0.4, 0.8, 0.4]
           }}
-          transition={{ duration: 2.5, repeat: Infinity, delay: 2 }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
       </div>
     </section>
